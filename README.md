@@ -1,8 +1,8 @@
 # OOAD-gizmoball
 
 ## Assignment
-- Reconstruction ： YuJin Sun
-- UI & Redesign: Mia Xu
+- Construction ： YuJin Sun
+- UI & Design: Mia Xu
 - Controller: TongXin Hou
 - Report: Steve Yang
 
