@@ -17,3 +17,5 @@ U
 %src/ViewIcon/TriangleBarrierIcon.java,2/3/236b06d26bec62d0ccf4b3feb613706a93959525
 S
 #src/ViewIcon/SquareBarrierIcon.java,9/e/9e3183c49da443beafcc636b7f73713caed1496d
+M
+src/ViewIcon/AbsoberIcon.java,3/0/304af705dbfa40680c38523a6a8787418e738e6a
