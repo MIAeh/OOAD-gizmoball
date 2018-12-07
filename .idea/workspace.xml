@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eb808ab-9416-4fa6-b258-14fa75c8ffeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/LeftFlipper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/RightFlipper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ViewIcon/MyIcon.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Entity/StaticFlipper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ViewIcon/AbsoberIcon.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c06a2f6cb863b3bbe9833ca2e7bb5e9d595e12c" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c06a2f6cb863b3bbe9833ca2e7bb5e9d595e12c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/501ac0ba7e3d0844d10c2412cd4fc3f375539f0c" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/501ac0ba7e3d0844d10c2412cd4fc3f375539f0c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83ce3e82c6c8bb73da9f354904bd05bd7638f800" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83ce3e82c6c8bb73da9f354904bd05bd7638f800" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e3183c49da443beafcc636b7f73713caed1496d" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e3183c49da443beafcc636b7f73713caed1496d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/BuildModeGUI.java" afterPath="$PROJECT_DIR$/src/Controller/BuildModeGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/BallIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/BallIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/CircleBarrierIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/CircleBarrierIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/DeleteIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/DeleteIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/LeftStaticFlipperIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/LeftStaticFlipperIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/MoveIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/MoveIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/RightStaticFlipperIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/RightStaticFlipperIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/RotateIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/RotateIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/RotatedFlipperIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/RotatedFlipperIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/SquareBarrierIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/SquareBarrierIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewIcon/TriangleBarrierIcon.java" afterPath="$PROJECT_DIR$/src/ViewIcon/TriangleBarrierIcon.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,43 +85,33 @@
       <file leaf-file-name="BuildModeGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/BuildModeGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
-              <caret line="188" column="5" lean-forward="false" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
+            <state relative-caret-position="122">
+              <caret line="188" column="53" lean-forward="false" selection-start-line="188" selection-start-column="53" selection-end-line="188" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5190#5191#0" expanded="true" />
-                <element signature="e#5223#5224#0" expanded="true" />
+                <element signature="e#5782#5783#0" expanded="true" />
+                <element signature="e#5815#5816#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RotatedFlipperIcon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ViewIcon/RotatedFlipperIcon.java">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RightStaticFlipperIcon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ViewIcon/RightStaticFlipperIcon.java">
+      <file leaf-file-name="RunModeGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/RunModeGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#326#327#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -791,12 +760,12 @@
       <workItem from="1544003098186" duration="951000" />
       <workItem from="1544004304355" duration="27000" />
       <workItem from="1544004396863" duration="1328000" />
-      <workItem from="1544166086035" duration="6779000" />
+      <workItem from="1544166086035" duration="7204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9085000" />
+    <option name="totallyTimeSpent" value="9510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1202" height="800" extended-state="0" />
@@ -853,22 +822,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/OperationListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Absorber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/ViewIcon/TriangleBarrierIcon.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1313,14 +1266,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RunModeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/BuildModeGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="188" column="5" lean-forward="false" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
+        <state relative-caret-position="122">
+          <caret line="188" column="53" lean-forward="false" selection-start-line="188" selection-start-column="53" selection-end-line="188" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5190#5191#0" expanded="true" />
-            <element signature="e#5223#5224#0" expanded="true" />
+            <element signature="e#5782#5783#0" expanded="true" />
+            <element signature="e#5815#5816#0" expanded="true" />
           </folding>
         </state>
       </provider>

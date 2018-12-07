@@ -84,6 +84,7 @@ public class BuildModeGUI extends JFrame {
         JButton bt_delete = new JButton("Delete");
         ImageIcon ic_delete = new ImageIcon("/icons/bt-delete.png");
         bt_delete.setIcon(ic_delete);
+        bt_delete.setPreferredSize(new Dimension(20, 20));
 //        bt_delete.addActionListener(listener3);
         bt_delete.setFocusable(false);
         bt_delete.setBackground();
@@ -95,7 +96,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_rotate = new JButton("Rotate");
         ImageIcon ic_rotate = new ImageIcon("/icons/bt-rotate.png");
-        bt_delete.setIcon(ic_rotate);
+        bt_rotate.setIcon(ic_rotate);
+        bt_rotate.setPreferredSize(new Dimension(20, 20));
 //        bt_rotate.addActionListener(listener3);
         bt_rotate.setFocusable(false);
         buttons.add(bt_rotate);
@@ -105,7 +107,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_move = new JButton("Rotate");
         ImageIcon ic_move = new ImageIcon("/icons/bt-move.png");
-        bt_delete.setIcon(ic_move);
+        bt_move.setIcon(ic_move);
+        bt_move.setPreferredSize(new Dimension(20, 20));
 //        bt_move.addActionListener(listener3);
         bt_move.setFocusable(false);
         buttons.add(bt_move);
@@ -115,7 +118,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_square = new JButton("Square");
         ImageIcon ic_square = new ImageIcon("/icons/ic-square.png");
-        bt_delete.setIcon(ic_square);
+        bt_square.setIcon(ic_square);
+        bt_square.setPreferredSize(new Dimension(20, 20));
 //        bt_square.addActionListener(listener3);
         bt_square.setFocusable(false);
         buttons.add(bt_square);
@@ -125,7 +129,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_triangle = new JButton("Triangle");
         ImageIcon ic_triangle = new ImageIcon("/icons/ic-triangle.png");
-        bt_delete.setIcon(ic_triangle);
+        bt_triangle.setIcon(ic_triangle);
+        bt_triangle.setPreferredSize(new Dimension(20, 20));
 //        bt_triangle.addActionListener(listener3);
         bt_triangle.setFocusable(false);
         buttons.add(bt_triangle);
@@ -135,7 +140,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_circle = new JButton("Circle");
         ImageIcon ic_circle = new ImageIcon("/icons/ic-circle.png");
-        bt_delete.setIcon(ic_circle);
+        bt_circle.setIcon(ic_circle);
+        bt_circle.setPreferredSize(new Dimension(20, 20));
 //        bt_circle.addActionListener(listener3);
         bt_circle.setFocusable(false);
         buttons.add(bt_circle);
@@ -145,7 +151,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_absorber = new JButton("Absorber");
         ImageIcon ic_absorber = new ImageIcon("/icons/ic-absorber.png");
-        bt_delete.setIcon(ic_absorber);
+        bt_absorber.setIcon(ic_absorber);
+        bt_absorber.setPreferredSize(new Dimension(20, 20));
 //        bt_absorber.addActionListener(listener3);
         bt_absorber.setFocusable(false);
         buttons.add(bt_absorber);
@@ -156,7 +163,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_lflipper = new JButton("LFlipper");
         ImageIcon ic_lflipper = new ImageIcon("/icons/ic-left-flipper.png");
-        bt_delete.setIcon(ic_lflipper);
+        bt_lflipper.setIcon(ic_lflipper);
+        bt_lflipper.setPreferredSize(new Dimension(20, 20));
 //        bt_lflipper.addActionListener(listener3);
         bt_lflipper.setFocusable(false);
         buttons.add(bt_lflipper);
@@ -166,7 +174,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton bt_rflipper = new JButton("RFlipper");
         ImageIcon ic_rflipper = new ImageIcon("/icons/ic-right-flipper.png");
-        bt_delete.setIcon(ic_rflipper);
+        bt_rflipper.setIcon(ic_rflipper);
+        bt_rflipper.setPreferredSize(new Dimension(20, 20));
 //        bt_rflipper.addActionListener(listener3);
         bt_rflipper.setFocusable(false);
         buttons.add(bt_rflipper);
@@ -176,7 +185,8 @@ public class BuildModeGUI extends JFrame {
          */
         JButton ball = new JButton("Ball");
         ImageIcon ic_ball = new ImageIcon("/icons/ic-ball.png");
-        bt_delete.setIcon(ic_ball);
+        ball.setIcon(ic_ball);
+        ball.setPreferredSize(new Dimension(20, 20));
 //        ball.addActionListener(listener3);
         ball.setFocusable(false);
         buttons.add(ball);
