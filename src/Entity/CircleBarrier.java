@@ -1,6 +1,68 @@
 package Entity;
 
+import java.awt.Color;
 
-public class CircleBarrier {
+import physics.Circle;
+import physics.Geometry;
+import physics.Vect;
+
+public class CircleBarrier{
+
+	private double x;
+	private double y;
+	private double width=1;
+	private int height=1;
+	private double radius;
+	private Color colour;
+	private String ID;
+	
+	private Circle circle;
+
+	public CircleBarrier(String id, double x, double y){
+		this.x = x;
+		this.y = y;
+		colour = Color.decode("#5CB8CC");
+		radius = 12.5;
+		circle = new Circle(new Vect(x, y), radius);
+		this.ID = id;
+	}
+	public double getX(){
+		return x;
+	}
+
+	public double getY(){
+		return y;
+	}
+	
+	public boolean canRotate() {
+		return false;
+	}
+	
+	public Circle getCircle(){
+		return circle;
+	}
+	
+	public String getID() {
+		return ID;
+	}
+	
+	//碰撞时间
+	public double timeUntilCircleCollision(Ball b) {
+		Circle ballCircle = b.getCircle();
+		Vect ballVelocity = new Vect(b.getVx(),b.getVy());
+		Circle circle = new Circle(new Vect(x, y), radius);
+		return Geometry.timeUntilCircleCollision(circle, ballCircle, ballVelocity);
+	}
+	
+	
+	//反弹小球
+	public Vect reflectBall(Ball b) {
+		Circle circle = new Circle(new Vect(x, y), radius);
+		Vect ballVelocity = new Vect(b.getVx(),b.getVy());
+		return Geometry.reflectCircle(circle.getCenter(), b.getCircle().getCenter(),
+				ballVelocity, 1.0);
+		
+	}
+	
 
 }
