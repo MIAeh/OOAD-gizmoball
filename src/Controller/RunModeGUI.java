@@ -33,6 +33,8 @@ public class RunModeGUI extends JFrame {
 	private JMenuBar menubar;
 	private JMenuItem Quit;
 	private Model m;
+	private ActionListener actionListener;
+	private OperationListener operationListener;
 //	private ActionListener listener;
 //	private ShootBallListener listener1;
 //	private SwitchToBuildListener listener2;
@@ -51,6 +53,7 @@ public class RunModeGUI extends JFrame {
 		setJMenuBar(menubar);
 		Quit = new JMenuItem("Quit");
 		fileMenu.add(Quit);
+		operationListener = new OperationListener(m);
 //		listener = new RunListener(m);
 //		listener1 = new ShootBallListener(m);
 //		listener2 = new SwitchToBuildListener(m, this);
@@ -70,19 +73,19 @@ public class RunModeGUI extends JFrame {
 
 
 		JButton bt_start = new JButton("Start");
-//		bt_start.addActionListener(listener);
+		bt_start.addActionListener(operationListener);
 		bt_start.setFont(gf);
 		bt_start.setFocusable(false);
 		buttons.add(bt_start);
 
 		JButton bt_build = new JButton("Build");
-//		bt_build.addActionListener(listener2);
+		bt_build.addActionListener(operationListener);
 		bt_build.setFont(gf);
 		bt_build.setFocusable(false);
 		buttons.add(bt_build);
 
 		JButton bt_stop = new JButton("Stop");
-		//bt_stop.addActionListener(listener);
+		bt_stop.addActionListener(operationListener);
 		bt_stop.setFont(gf);
 		bt_stop.setFocusable(false);
 		buttons.add(bt_stop);

@@ -13,6 +13,7 @@ import java.util.Scanner;
 
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
+import javax.swing.Timer;
 
 import Entity.*;
 
@@ -20,18 +21,49 @@ import Entity.*;
 public class OperationListener extends Observable implements ActionListener{
 
 	private Model el;
+	private Timer timer;
 	
 
 	public OperationListener(Model el) {
 	
 		this.el=el;
+		this.timer = new Timer(30, this);
 	}
 	
 	
 	@Override
 	public final void actionPerformed(final ActionEvent e) {
+		el.setRBT();
 
+		if (e.getSource() == timer) {
+			el.moveBall();
+		}  else { 
 		switch (e.getActionCommand()) {
+		case "Rotate":
+			el.setRBT();
+			break;
+		case "Start":
+			timer.start();
+			break;
+		case "Stop":
+			timer.stop();
+			break;
+		case "Build":
+			el.stopBalls();
+			el.setRunMode();
+			new BuildModeGUI(el);
+			//rg.close();
+			break;
+		case "Run":
+			el.startBalls();
+			el.setRunModeT(); 
+			new RunModeGUI(el);
+			System.out.println("run");
+			break;
+		case "Delete":
+			System.out.println("Delete Button Selected");
+		    el.setDBT(); 
+			break;
 		case "CLear":
 			this.clearMode(el);
 			break;
@@ -77,6 +109,7 @@ public class OperationListener extends Observable implements ActionListener{
 			break;
 		case "Quit":
 			this.quitGame();
+		}
 		}
 	
 	}

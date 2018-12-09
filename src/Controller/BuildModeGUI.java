@@ -22,7 +22,7 @@ public class BuildModeGUI extends JFrame{
     private EntityListener entityListener;
     private EntityListener el;
     private OperationListener ol;
-//    private MListener getCoords;
+    private MsListener mouseListener;
     private JLayeredPane lpane = new JLayeredPane();
     private String path = "";
 
@@ -48,14 +48,14 @@ public class BuildModeGUI extends JFrame{
         fileMenu.add(Save);
         Quit = new JMenuItem("Quit");
         fileMenu.add(Quit);
-
+        mouseListener = new MsListener(this, m);
         System.out.println("Succeed in showing menu");
 
 
         /**
          * 设置尺寸
          */
-//        getCoords = new MListener(this, m);
+        
         lpane.setBounds(0, 0, 500, 500);
         board.setOpaque(true);
         board.setBounds(0, 0, 500, 500);
@@ -74,6 +74,7 @@ public class BuildModeGUI extends JFrame{
          * 绑定一系列listener监听器
          */
         operationListener = new OperationListener(m);
+        entityListener = new EntityListener(m);
         Clear.addActionListener(operationListener);
         Load.addActionListener(operationListener);
         Save.addActionListener(operationListener);
@@ -92,7 +93,7 @@ public class BuildModeGUI extends JFrame{
          * @param bt_run 运行按钮
          */
         JButton bt_run = new JButton("Run");
-        bt_run.addActionListener(entityListener);
+        bt_run.addActionListener(operationListener);
         bt_run.setFocusable(false);
         bt_run.setFont(gf);
         buttons.add(bt_run);
@@ -101,12 +102,12 @@ public class BuildModeGUI extends JFrame{
          * @param bt_delete 删除按钮
          */
         JButton bt_delete = new JButton("Delete");
-        ImageIcon ic_delete = new ImageIcon("/icons/bt-delete.png");
-        bt_delete.setIcon(ic_delete);
+        //ImageIcon ic_delete = new ImageIcon("/icons/bt-delete.png");
+        //bt_delete.setIcon(ic_delete);
         bt_delete.setPreferredSize(new Dimension(20, 20));
-        bt_delete.addActionListener(entityListener);
+        bt_delete.addActionListener(operationListener);
         bt_delete.setFocusable(false);
-        bt_delete.setBackground(Color.BLUE);
+       // bt_delete.setBackground(Color.BLUE);
         buttons.add(bt_delete);
 
 
@@ -114,8 +115,8 @@ public class BuildModeGUI extends JFrame{
          * @param bt_rotate 旋转按钮
          */
         JButton bt_rotate = new JButton("Rotate");
-        ImageIcon ic_rotate = new ImageIcon("/icons/bt-rotate.png");
-        bt_rotate.setIcon(ic_rotate);
+       // ImageIcon ic_rotate = new ImageIcon("/icons/bt-rotate.png");
+        //bt_rotate.setIcon(ic_rotate);
         bt_rotate.setPreferredSize(new Dimension(20, 20));
         bt_rotate.addActionListener(entityListener);
         bt_rotate.setFocusable(false);
@@ -124,7 +125,7 @@ public class BuildModeGUI extends JFrame{
         /**
          * @param bt_move 移动按钮
          */
-        JButton bt_move = new JButton(new ImageIcon("./icons/bt-move.png"));
+        JButton bt_move = new JButton("Move");
         bt_move.setPreferredSize(new Dimension(20, 20));
         bt_move.addActionListener(entityListener);
         bt_move.setFocusable(false);
@@ -134,8 +135,8 @@ public class BuildModeGUI extends JFrame{
          * @param bt_square 方形障碍物
          */
         JButton bt_square = new JButton("Square");
-        ImageIcon ic_square = new ImageIcon("/icons/ic-square.png");
-        bt_square.setIcon(ic_square);
+        //ImageIcon ic_square = new ImageIcon("../icons/ic-square.png");
+       // bt_square.setIcon(ic_square);
         bt_square.setPreferredSize(new Dimension(20, 20));
         bt_square.addActionListener(entityListener);
         bt_square.setFocusable(false);
@@ -145,8 +146,8 @@ public class BuildModeGUI extends JFrame{
          * @param bt_triangle 三角形障碍物
          */
         JButton bt_triangle = new JButton("Triangle");
-        ImageIcon ic_triangle = new ImageIcon("/icons/ic-triangle.png");
-        bt_triangle.setIcon(ic_triangle);
+       // ImageIcon ic_triangle = new ImageIcon("../icons/ic-triangle.png");
+        //bt_triangle.setIcon(ic_triangle);
         bt_triangle.setPreferredSize(new Dimension(20, 20));
         bt_triangle.addActionListener(entityListener);
         bt_triangle.setFocusable(false);
@@ -156,8 +157,8 @@ public class BuildModeGUI extends JFrame{
          * @param bt_circle 圆形障碍物
          */
         JButton bt_circle = new JButton("Circle");
-        ImageIcon ic_circle = new ImageIcon("/icons/ic-circle.png");
-        bt_circle.setIcon(ic_circle);
+        //ImageIcon ic_circle = new ImageIcon("../icons/ic-circle.png");
+        //bt_circle.setIcon(ic_circle);
         bt_circle.setPreferredSize(new Dimension(20, 20));
         bt_circle.addActionListener(entityListener);
         bt_circle.setFocusable(false);
@@ -167,8 +168,8 @@ public class BuildModeGUI extends JFrame{
          * @param bt_absorber 吸收板
          */
         JButton bt_absorber = new JButton("Absorber");
-        ImageIcon ic_absorber = new ImageIcon("/icons/ic-absorber.png");
-        bt_absorber.setIcon(ic_absorber);
+        //ImageIcon ic_absorber = new ImageIcon("../icons/ic-absorber.png");
+        //bt_absorber.setIcon(ic_absorber);
         bt_absorber.setPreferredSize(new Dimension(20, 20));
         bt_absorber.addActionListener(entityListener);
         bt_absorber.setFocusable(false);
@@ -179,8 +180,8 @@ public class BuildModeGUI extends JFrame{
          * @param bt_lflipper 左侧挡板
          */
         JButton bt_lflipper = new JButton("LFlipper");
-        ImageIcon ic_lflipper = new ImageIcon("/icons/ic-left-flipper.png");
-        bt_lflipper.setIcon(ic_lflipper);
+        //ImageIcon ic_lflipper = new ImageIcon("../icons/ic-left-flipper.png");
+        //bt_lflipper.setIcon(ic_lflipper);
         bt_lflipper.setPreferredSize(new Dimension(20, 20));
         bt_lflipper.addActionListener(entityListener);
         bt_lflipper.setFocusable(false);
@@ -190,8 +191,8 @@ public class BuildModeGUI extends JFrame{
          * @param bt_rflipper 右侧挡板
          */
         JButton bt_rflipper = new JButton("RFlipper");
-        ImageIcon ic_rflipper = new ImageIcon("/icons/ic-right-flipper.png");
-        bt_rflipper.setIcon(ic_rflipper);
+       // ImageIcon ic_rflipper = new ImageIcon("../icons/ic-right-flipper.png");
+        //bt_rflipper.setIcon(ic_rflipper);
         bt_rflipper.setPreferredSize(new Dimension(20, 20));
         bt_rflipper.addActionListener(entityListener);
         bt_rflipper.setFocusable(false);
@@ -201,8 +202,8 @@ public class BuildModeGUI extends JFrame{
          * @param ball 小球
          */
         JButton ball = new JButton("Ball");
-        ImageIcon ic_ball = new ImageIcon("/icons/ic-ball.png");
-        ball.setIcon(ic_ball);
+       // ImageIcon ic_ball = new ImageIcon("../icons/ic-ball.png");
+        //ball.setIcon(ic_ball);
         ball.setPreferredSize(new Dimension(20, 20));
         ball.addActionListener(entityListener);
         ball.setFocusable(false);

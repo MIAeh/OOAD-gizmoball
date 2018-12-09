@@ -26,7 +26,7 @@ public class Model extends Observable {
 	private ArrayList<TriangleBarrier> Triangle;
 	private ArrayList<SquareBarrier> SBumper;
 	private ArrayList<StaticFlipper> rFlipper;
-	//private ArrayList<LeftFlipper> lFlipper;
+	private ArrayList<StaticFlipper> lFlipper;
 	private ArrayList<Absorber> absorb;
 	private final double GRAVITY = 875;//����
 	private final double MU = 0.025;
@@ -53,7 +53,7 @@ public class Model extends Observable {
 		walls = new Walls(0, 0, 500, 500);
 		absorb = new ArrayList<>();
 		rFlipper = new ArrayList<>();
-		//lFlipper = new ArrayList<>();
+		lFlipper = new ArrayList<>();
 		CBumper = new ArrayList<>();
 		SBumper = new ArrayList<>();
 		Triangle = new ArrayList<>();
@@ -68,7 +68,7 @@ public class Model extends Observable {
 		rotateBumper = false;
 		b = false;
 		absorber = false;
-		occupiedSq = new boolean[20][20];
+		occupiedSq = new boolean[200][200];
 		gizmoID=null;
 		tItr = Triangle.iterator();
 		sqItr = SBumper.iterator();
@@ -139,7 +139,6 @@ public class Model extends Observable {
 
 	
 		runMode = false;
-
 	}
 
 	public void setRunModeT() {
@@ -306,9 +305,9 @@ public class Model extends Observable {
 		return Triangle;
 	}
 
-//	public ArrayList<LeftFlipper> getLF() {
-//		return lFlipper;
-//	}
+	public ArrayList<StaticFlipper> getLF() {
+		return lFlipper;
+	}
 
 	public ArrayList<StaticFlipper> getRF() {
 		return rFlipper;
@@ -347,25 +346,25 @@ public class Model extends Observable {
 		}
 	}
 
-//	public void flipLeftFlipper(){
-//		for (LeftFlipper lf : lFlipper) {
-//
-//			lf.flip();
-//			this.setChanged();
-//			this.notifyObservers();
-//
-//		}
-//	}
+	public void flipLeftFlipper(){
+		for (StaticFlipper lf : lFlipper) {
 
-//	public void unflipLeftFlipper(){
-//		for (LeftFlipper lf : lFlipper) {
-//
-//			lf.unFlip();
-//			this.setChanged();
-//			this.notifyObservers();
-//
-//		}
-//	}
+			lf.flip();
+			this.setChanged();
+			this.notifyObservers();
+
+		}
+	}
+
+	public void unflipLeftFlipper(){
+		for (StaticFlipper lf : lFlipper) {
+
+			lf.unFlip();
+			this.setChanged();
+			this.notifyObservers();
+
+		}
+	}
 
 
 
@@ -536,16 +535,16 @@ public class Model extends Observable {
 					}
 				}
 			} 
-//			for (LeftFlipper lFlip : lFlipper) {
-//				for (int i = 0; i < lFlip.getCircles().size(); i++) {
-//					time = Geometry.timeUntilCircleCollision(lFlip.getCircles().get(i), ballCircle, ballVelocity);
-//					if (time < shortestTime) {
-//						shortestTime = time;
-//						newVelo = Geometry.reflectCircle(lFlip.getCircles().get(i).getCenter(),
-//								b.getCircle().getCenter(), b.getVelo(), 1.0);
-//					}
-//				}
-//			} 
+			for (StaticFlipper lFlip : lFlipper) {
+				for (int i = 0; i < lFlip.getCircles().size(); i++) {
+					time = Geometry.timeUntilCircleCollision(lFlip.getCircles().get(i), ballCircle, ballVelocity);
+					if (time < shortestTime) {
+						shortestTime = time;
+						newVelo = Geometry.reflectCircle(lFlip.getCircles().get(i).getCenter(),
+								b.getCircle().getCenter(), b.getVelo(), 1.0);
+					}
+				}
+			} 
 //			for (LeftFlipper lFlip : lFlipper) {
 //				for (int i = 0; i < lFlip.getLines().size(); i++) {
 //					time = Geometry.timeUntilWallCollision(lFlip.getLines().get(i), ballCircle, ballVelocity);
@@ -609,17 +608,17 @@ public class Model extends Observable {
 
 	}
 
-//	public void addLFlipper(double x, double y) { 
-//
-//		String ID = "LF" + (int)x + (int)y;
-//
-//		lFlipper.add(new LeftFlipper(ID, x, y));
-//		sqOccupied((int)x, (int)y);
-//		sqOccupied((int)x, (int)y+25);
-//		this.setChanged();
-//		this.notifyObservers();
-//
-//	}
+	public void addLFlipper(double x, double y) { 
+
+		String ID = "LF" + (int)x + (int)y;
+
+		lFlipper.add(new StaticFlipper(ID, x, y));
+		sqOccupied((int)x, (int)y);
+		sqOccupied((int)x, (int)y+25);
+		this.setChanged();
+		this.notifyObservers();
+
+	}
 
 	public void addRFlipper(double x, double y) { 
 
@@ -849,22 +848,21 @@ public void removeCBarrier(String id) {
 	}
 		}
 	
-//	public void removeLFlipper(String id) {
-//		
-//		Iterator <LeftFlipper> lfItr = lFlipper.iterator();
-//		
-//		while (lfItr.hasNext()) { 
-//			LeftFlipper leftf = lfItr.next();
-//		if (id.equals(leftf.getID())) {
-//			lfItr.remove();
-//		}
-//		
-//		this.setChanged();
-//		this.notifyObservers();
-//				
-//		
-//	}
-//		}
+	public void removeLFlipper(String id) {
+		
+		Iterator <StaticFlipper> lfItr = lFlipper.iterator();
+		
+		while (lfItr.hasNext()) { 
+			StaticFlipper leftf = lfItr.next();
+		if (id.equals(leftf.getID())) {
+			lfItr.remove();
+		}
+		
+		this.setChanged();
+		this.notifyObservers();
+						
+	}
+		}
 
 	
 
@@ -895,10 +893,10 @@ public void removeCBarrier(String id) {
 				rFlipper.add(new StaticFlipper(words.get(1), (Integer.parseInt(words.get(2)) * 25) + 40,
 						Integer.parseInt(words.get(3)) * 25));
 			}
-//			if (words.get(0).equals("LeftFlipper")) {
-//				lFlipper.add(new LeftFlipper(words.get(1), (Integer.parseInt(words.get(2)) * 25),
-//						(Integer.parseInt(words.get(3)) * 25)));
-//			}
+			if (words.get(0).equals("LeftFlipper")) {
+				lFlipper.add(new StaticFlipper(words.get(1), (Integer.parseInt(words.get(2)) * 25),
+						(Integer.parseInt(words.get(3)) * 25)));
+			}
 			if (words.get(0).equals("Absorber")) {
 				absorb.add(new Absorber(words.get(1), Integer.parseInt(words.get(2)) * 25,
 						Integer.parseInt(words.get(3)) * 25, Integer.parseInt(words.get(4)) * 25,
