@@ -12,16 +12,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import javax.swing.JFileChooser;
-import javax.swing.Timer;
 import javax.swing.filechooser.FileSystemView;
 
-import Entity.Absorber;
-import Entity.Ball;
-import Entity.CircleBarrier;
-import Entity.SquareBarrier;
-import Entity.StaticFlipper;
-import Entity.TriangleBarrier;
-
+import Entity.*;
 
 
 public class OperationListener extends Observable implements ActionListener{
@@ -89,7 +82,7 @@ public class OperationListener extends Observable implements ActionListener{
 	}
 	
 	
-	//清空界面上所有元素
+	//??????????????????
 	public void clearMode(Model model) {
 		model.getAbsorbers().clear();
 		model.getBalls().clear();
@@ -101,14 +94,14 @@ public class OperationListener extends Observable implements ActionListener{
 	}
 	
 	
-	//退出
+	//????
 
 	public void quitGame(){
 		System.exit(0);
 	}
 	
 
-	//保存
+	//????
 	public void saveGame(String path, Model model) throws IOException{
 		BufferedWriter bw = null;
 		FileWriter fw = new FileWriter(path);
@@ -190,7 +183,7 @@ public class OperationListener extends Observable implements ActionListener{
 		}
 	}
 	
-	//加载
+	//????
 
 	public void loadGame(String path, Model model) throws FileNotFoundException {
 

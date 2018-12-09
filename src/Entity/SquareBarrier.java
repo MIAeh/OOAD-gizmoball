@@ -65,7 +65,19 @@ public class SquareBarrier {
 	public void bounceBall(Ball ball) {
 
 	}
-	
+
+	public Color getColour() {
+		return colour;
+	}
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public double getW() {
+		return w;
+	}
+
 	public LineSegment getLine(){
 		return ls;
 	}
@@ -79,13 +91,13 @@ public class SquareBarrier {
 		return ID;
 	}
 	
-	//Åö×²Ê±¼ä
+	//ï¿½ï¿½×²Ê±ï¿½ï¿½
 //	public double timeUntilCircleCollision(Ball b) {
 //		
 //	}
 //	
 //	
-//	//·´µ¯Ð¡Çò
+//	//ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½
 //	public Vect reflectBall(Ball b) {
 //		
 //		

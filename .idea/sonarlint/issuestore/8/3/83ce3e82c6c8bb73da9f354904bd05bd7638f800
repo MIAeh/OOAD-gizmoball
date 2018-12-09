@@ -1,3 +1,56 @@
 
+vsquid:S00117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…½…ÿÿÿÿÿ8Œ¦¸Êø,
+hsquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(ş¡š8ƒ£€Êø,
+psquid:S00117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û²ŒÊ8’À‚Êø,
+vsquid:S00117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞŸ×°üÿÿÿÿ8½Æ˜Êø,
+qsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÂ¦ø8’À‚Êø,
+psquid:S00117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ±®18™ÒÊø,
+_squid:UselessImportCheck"4Remove this unused import 'java.awt.event.KeyEvent'.(¬ğİÍ8†¨ÈÉø,
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(å¡Ÿ´üÿÿÿÿ8†¨ÈÉø,
+usquid:S00117w"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò¡Àúøÿÿÿÿ8’À‚Êø,
+Ksquid:S1068"(Remove this unused "path" private field.(¥ÔÛ¤ıÿÿÿÿ8™“ĞÉø,
+vsquid:S00117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¨¸’şÿÿÿÿ8’À‚Êø,
+usquid:S00117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞŠÅûûÿÿÿÿ8’À‚Êø,
+Osquid:S2387","menuBar" is the name of a field in "Frame".(ëùĞ³ûÿÿÿÿ8®æÑÉø,
+Usquid:UselessImportCheck"*Remove this unused import 'java.awt.Font'.(êŸŸ8Ãä×Éø,
+usquid:S00117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òâî‘ÿÿÿÿÿ8‘§‹Êø,
+@squid:S1659""Declare "Quit" on a separate line.(š¹É”8ä“ÄÉø,
+qsquid:S00117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÌë–8’À‚Êø,
+Lsquid:S1068")Remove this unused "lpane" private field.(å¹àöøÿÿÿÿ8ıÑÔÉø,
+usquid:S00117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©‰¿¢ıÿÿÿÿ8—­âÉø,
+`squid:UselessImportCheck"0Remove this unused import 'java.awt.FlowLayout'.(Íğç¢ÿÿÿÿÿ8†¨ÈÉø,
+osquid:CommentedOutCodeLine†"<This block of commented-out lines of code should be removed.(ªÑ” şÿÿÿÿ8’À‚Êø,
+nsquid:S00116"ORename this field "Save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¹É”8ä“ÄÉø,
+bsquid:UselessImportCheck"7Remove this unused import 'java.awt.event.KeyListener'.(ç„›û8†¨ÈÉø,
+]squid:UselessImportCheck
+"-Remove this unused import 'java.awt.Toolkit'.(Õºşÿÿÿÿ8Ãä×Éø,
+qsquid:S00117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‡ÿ§8’À‚Êø,
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(”ŒŸ÷úÿÿÿÿ8õÃ‡Êø,
+osquid:S00116"PRename this field "Clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¹É”8ä“ÄÉø,
+usquid:S00117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åè¦èúÿÿÿÿ8é¼ôÉø,
+osquid:CommentedOutCodeLine³"<This block of commented-out lines of code should be removed.(†Ö²ûÿÿÿÿ8’À‚Êø,
+psquid:S00117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôˆÚ8Şÿ‹Êø,
+qsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸à¼8 åÊø,
+nsquid:S00116"ORename this field "Load" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¹É”8ä“ÄÉø,
+@squid:S1659""Declare "Save" on a separate line.(š¹É”8ä“ÄÉø,
+@squid:S1659""Declare "Load" on a separate line.(š¹É”8ä“ÄÉø,
+Zsquid:UselessImportCheck"/Remove this unused import 'java.awt.Container'.(˜ƒ×‹8Ãä×Éø,
+nsquid:CommentedOutCodeLine{"<This block of commented-out lines of code should be removed.(ÓåÙËıÿÿÿÿ8’À‚Êø,
+osquid:CommentedOutCodeLine¾"<This block of commented-out lines of code should be removed.(’Ã·“üÿÿÿÿ8’À‚Êø,
+isquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(¾ã›µ8’À‚Êø,
+osquid:CommentedOutCodeLine¨"<This block of commented-out lines of code should be removed.(òò–­ÿÿÿÿÿ8’À‚Êø,
+[squid:UselessImportCheck"+Remove this unused import 'java.awt.Color'.(ùÈãÈøÿÿÿÿ8†¨ÈÉø,
+osquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(²ï„Áùÿÿÿÿ8’À‚Êø,
+psquid:S00117x"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»¶8›èÊø,
+vsquid:S00117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„å²ßûÿÿÿÿ8Ûâ™Êø,
+jsquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(õÌ‡˜8’À‚Êø,
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
-^squid:S2094"BRemove this empty class, write its code or make it an "interface".(¹Ñê™üÿÿÿÿ
+isquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(ÁĞš¾8®´•Êø,
+qsquid:S00117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚŒÛ8ıÇ—Êø,
+]squid:UselessImportCheck"2Remove this unused import 'java.awt.BorderLayout'.(íÿì°8†¨ÈÉø,
+isquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(¢åüĞ8’À‚Êø,
+nsquid:S00116"ORename this field "Quit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¹É”8ä“ÄÉø,
+nsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(ôàÿ¦øÿÿÿÿ8ş€Êø,
+qsquid:S00117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÅı¥8’À‚Êø,
+psquid:S00117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªøÔõ8Ë‡Êø,
+fsquid:UselessImportCheck"6Remove this unused import 'java.awt.event.KeyAdapter'.(ä’£åşÿÿÿÿ8†¨ÈÉø,

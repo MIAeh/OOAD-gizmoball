@@ -1,64 +1,45 @@
 package Controller;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.awt.*;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileSystemView;
 
-import Entity.Absorber;
-import Entity.Ball;
-import Entity.CircleBarrier;
 //import View.BuildGUI;
-import physics.Circle;
-import physics.Geometry;
-import physics.LineSegment;
-import physics.Vect;
+import Entity.Model;
+import View.*;
 
 public class BuildModeGUI extends JFrame{
 
 //    private Board board;
 //    private Grid grid;
     private JMenu fileMenu;
-    private JMenuBar menuBar;
+    private JMenuBar menubar;
+    private Board board;
+    private Grid grid;
+    private Model m;
     private JMenuItem Clear, Load, Save, Quit;
-    private JLayeredPane lpane = new JLayeredPane();
-    private String path = "";
     private OperationListener operationListener;
     private EntityListener entityListener;
-    private Model m;
-
-    EntityListener el;
-    OperationListener ol;
+    private EntityListener el;
+    private OperationListener ol;
+//    private MListener getCoords;
+    private JLayeredPane lpane = new JLayeredPane();
+    private String path = "";
 
 
     public BuildModeGUI(Model m) {
         super("Gizmoball");
-
         this.m = m;
+        grid = new Grid(20,20);
+        board = new Board(600, 600, m);
         fileMenu = new JMenu("Menu");
 
         /**
          * 选项栏：清除、加载、保存、退出布局
          */
-        menuBar = new JMenuBar();
-        menuBar.add(fileMenu);
-        setJMenuBar(menuBar);
+        menubar = new JMenuBar();
+        menubar.add(fileMenu);
+        setJMenuBar(menubar);
         Clear = new JMenuItem("Clear");
         fileMenu.add(Clear);
         Load = new JMenuItem("Load");
@@ -69,6 +50,26 @@ public class BuildModeGUI extends JFrame{
         fileMenu.add(Quit);
 
         System.out.println("Succeed in showing menu");
+
+
+        /**
+         * 设置尺寸
+         */
+//        getCoords = new MListener(this, m);
+        lpane.setBounds(0, 0, 500, 500);
+        board.setOpaque(true);
+        board.setBounds(0, 0, 500, 500);
+        lpane.add(board, new Integer(1), 0);
+        lpane.add(grid, new Integer(0), 0);
+
+
+        setSize(517, 612);
+        //setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container cPane = getContentPane();
+
         /**
          * 绑定一系列listener监听器
          */
@@ -79,15 +80,10 @@ public class BuildModeGUI extends JFrame{
         Quit.addActionListener(operationListener);
         System.out.println("succeed in binding operationListener");
 
-
-        /**
-         * 设置尺寸
-         */
-
-
         /**
          * 设置Gizmo在build模式下的buttons
          */
+        Font gf = new Font("Arial", Font.BOLD, 12);
         JPanel buttons = new JPanel();
         //格状布局
         buttons.setLayout(new GridLayout(2,6));
@@ -98,8 +94,8 @@ public class BuildModeGUI extends JFrame{
         JButton bt_run = new JButton("Run");
         bt_run.addActionListener(entityListener);
         bt_run.setFocusable(false);
+        bt_run.setFont(gf);
         buttons.add(bt_run);
-
 
         /**
          * @param bt_delete 删除按钮
@@ -128,9 +124,7 @@ public class BuildModeGUI extends JFrame{
         /**
          * @param bt_move 移动按钮
          */
-        JButton bt_move = new JButton("Rotate");
-        ImageIcon ic_move = new ImageIcon("/icons/bt-move.png");
-        bt_move.setIcon(ic_move);
+        JButton bt_move = new JButton(new ImageIcon("./icons/bt-move.png"));
         bt_move.setPreferredSize(new Dimension(20, 20));
         bt_move.addActionListener(entityListener);
         bt_move.setFocusable(false);
@@ -214,10 +208,13 @@ public class BuildModeGUI extends JFrame{
         ball.setFocusable(false);
         buttons.add(ball);
 
+        cPane.add(buttons, BorderLayout.NORTH);
+        cPane.add(lpane, BorderLayout.CENTER);
+
+
+//        this.addKeyListener(listener1);
         setVisible(true);
         System.out.println("Succeed in showing button");
-        
-        
         
     }
 
@@ -226,128 +223,3 @@ public class BuildModeGUI extends JFrame{
     }
     
 }
-
-
-
-
-
-
-
-//package Controller;
-//
-//import java.util.ArrayList;
-//
-//import Entity.Absorber;
-//import Entity.Ball;
-//import Entity.CircleBarrier;
-//import Entity.RotatedFlipper;
-//import Entity.SquareBarrier;
-//import Entity.StaticFlipper;
-//import Entity.TriangleBarrier;
-//import ViewIcon.Board;
-//
-//
-//
-//public class BuildModeGUI {
-//
-//	private Board board;
-//	private ArrayList<Absorber> absorbers;
-//	private ArrayList<Ball> balls;
-//	private ArrayList<CircleBarrier> circleBarriers;
-//	private ArrayList<RotatedFlipper> rotatedFlipers;
-//	private ArrayList<SquareBarrier> squareBarriers;
-//	private ArrayList<StaticFlipper> staticFlippers;
-//	private ArrayList<TriangleBarrier> triangleBarriers;
-//	
-//	//初始化界面
-//	public BuildModeGUI() {
-//		
-//		board = new Board();
-//		
-//		absorbers = new ArrayList<>();
-//		balls = new ArrayList<>();
-//		circleBarriers = new ArrayList<>();
-//		rotatedFlipers = new ArrayList<>();
-//		squareBarriers = new ArrayList<>();
-//		staticFlippers = new ArrayList<>();
-//		triangleBarriers = new ArrayList<>();
-//	}
-//	
-//	
-//	
-//	public ArrayList<Absorber> getAbsorbers() {
-//		return absorbers;
-//	}
-//
-//	public void addAbsorbers(Absorber absorber) {
-//		this.absorbers.add(absorber);
-//	}
-//
-//	public ArrayList<Ball> getBalls() {
-//		return balls;
-//	}
-//
-//	public void addBalls(Ball ball) {
-//		this.balls.add(ball);
-//	}
-//
-//	public ArrayList<CircleBarrier> getCircleBarriers() {
-//		return circleBarriers;
-//	}
-//
-//	public void addCircleBarriers(CircleBarrier circleBarrier) {
-//		this.circleBarriers.add(circleBarrier);
-//	}
-//
-//	public ArrayList<RotatedFlipper> getRotatedFlipers() {
-//		return rotatedFlipers;
-//	}
-//
-//	public void addRotatedFlipers(RotatedFlipper rotatedFliper) {
-//		this.rotatedFlipers.add(rotatedFliper);
-//	}
-//
-//	public ArrayList<SquareBarrier> getSquareBarriers() {
-//		return squareBarriers;
-//	}
-//
-//	public void addSquareBarriers(SquareBarrier squareBarrier) {
-//		this.squareBarriers.add(squareBarrier);
-//	}
-//
-//	public ArrayList<StaticFlipper> getStaticFlippers() {
-//		return staticFlippers;
-//	}
-//
-//	public void addStaticFlippers(StaticFlipper staticFlipper) {
-//		this.staticFlippers.add(staticFlipper);
-//	}
-//
-//	public ArrayList<TriangleBarrier> getTriangleBarriers() {
-//		return triangleBarriers;
-//	}
-//
-//	public void addTriangleBarriers(TriangleBarrier triangleBarrier) {
-//		this.triangleBarriers.add(triangleBarrier);
-//	}
-//
-//	public void designMode() {
-//		
-//	}
-//	
-
-    //停止游戏
-//	public void stopBalls(){
-//		for(Ball b : balls){
-//			b.setStopped();
-//		}
-//	}
-//	
-    //小球开始运动，游戏开始
-//	public void startBalls(){
-//			for(Ball b : balls){
-//				b.start();
-//			}
-//	}
-//
-//}

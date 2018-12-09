@@ -45,8 +45,16 @@ public class CircleBarrier{
 	public String getID() {
 		return ID;
 	}
-	
-	//Åö×²Ê±¼ä
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public Color getColour() {
+		return colour;
+	}
+
+	//ï¿½ï¿½×²Ê±ï¿½ï¿½
 	public double timeUntilCircleCollision(Ball b) {
 		Circle ballCircle = b.getCircle();
 		Vect ballVelocity = new Vect(b.getVx(),b.getVy());
@@ -55,7 +63,7 @@ public class CircleBarrier{
 	}
 	
 	
-	//·´µ¯Ð¡Çò
+	//ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½
 	public Vect reflectBall(Ball b) {
 		Circle circle = new Circle(new Vect(x, y), radius);
 		Vect ballVelocity = new Vect(b.getVx(),b.getVy());

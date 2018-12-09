@@ -119,6 +119,10 @@ public class TriangleBarrier {
 		return radius;
 	}
 
+	public Color getColour() {
+		return colour;
+	}
+
 	public ArrayList<Circle> getCircles(){
 		return circles;
 	}

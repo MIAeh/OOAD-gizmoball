@@ -16,8 +16,6 @@ public class Ball {
 	private double y;
 	private Color colour;
 	private boolean stopped;
-	
-
 
 	public Ball(String ID, double x, double y, double xv, double yv) {
 		velocity = new Vect(xv, yv);
@@ -123,21 +121,21 @@ public class Ball {
 	}
 
 	
-	//ÖØÁ¦
+	//ï¿½ï¿½ï¿½ï¿½
 	public void applyGravity(double time,double GRAVITY,double t) {
 		this.vx=vx;
 		this.vy=this.vy + (GRAVITY*t);
 		
 	}
 	
-	//Ä¦²Á
+	//Ä¦ï¿½ï¿½
 	public void applyFriction(double time,double MU,double MU2) {
 		this.vx = vx*(1-(MU*time)-((MU2/25*vx)*time)); 
 		this.vy = vy*(1-(MU*time)-((MU2/25*vy)*time));
 		
 	}
 
-	//Ð¡ÇòËæÊ±¼äÒÆ¶¯
+	//Ð¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Æ¶ï¿½
 	public void movelBallForTime(double time) {
 		if(this.stopped) {
 			double newVx = this.vx;
@@ -148,25 +146,25 @@ public class Ball {
 		//return ball;
 	}
 	
-	//ÒÆ¶¯µ½Ö¸¶¨Î»ÖÃ
+	//ï¿½Æ¶ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Î»ï¿½ï¿½
 	public void move(double x,double y) {
 		this.x=x;
 		this.y=y;
 	}
 	
-	//±»ÎüÊÕÍ£Ö¹ÔË¶¯
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½Ë¶ï¿½
 	public void setStopped() {
 		this.stopped=true;
 		this.vx=0;
 		this.vy=0;
 	}
 	
-	//¿ªÊ¼ÔË¶¯
+	//ï¿½ï¿½Ê¼ï¿½Ë¶ï¿½
 	public void start(){
 		stopped = false;
 	}
 	
-	//ÇòÇòÏà×²
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²
 	public void reflectBall(Ball b) {
 		
 	}

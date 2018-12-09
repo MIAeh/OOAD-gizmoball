@@ -3,28 +3,8 @@ package Controller;
 import java.util.Observable;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
-import Entity.Absorber;
-import Entity.Ball;
-import Entity.CircleBarrier;
-import Entity.SquareBarrier;
-import Entity.StaticFlipper;
-import Entity.TriangleBarrier;
-import Entity.Walls;
-
-import physics.Circle;
-import physics.Geometry;
-import physics.LineSegment;
-import physics.Vect;
+import Entity.*;
 
 
 public class EntityListener extends Observable implements ActionListener {
