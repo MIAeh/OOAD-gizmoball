@@ -1,5 +1,5 @@
 /**
- * Èı½ÇĞÎµ²°å
+ * ä¸‰è§’å½¢æŒ¡æ¿
  */
 package ViewIcon;
 
@@ -17,7 +17,11 @@ public class TriangleBarrierIcon extends MyIcon {
 
     public void paintIcon(Component c, Graphics g, int x, int y) {
         /**
-         * @param triangle Ä¬ÈÏ±ß³¤Îª10,10,10_/2µÄÖ±½ÇÈı½ÇĞÎ
+<<<<<<< HEAD
+         * @param triangle é»˜è®¤è¾¹é•¿ä¸º10,10,10_/2çš„ç›´è§’ä¸‰è§’å½¢
+=======
+         * @param triangle æ¦›æ¨¿î…»æˆå½’æš±æ¶“ï¿½10,10,10_/2é¨å‹­æ´¿ç‘™æç¬ç‘™æ‘èˆ°
+>>>>>>> e1c1b7c93046cfe5fdc0762274bd497697c63b8b
          */
         Point p1 = new Point(5, 5);
         Point p2 = new Point(5, 15);

@@ -54,7 +54,7 @@ public class BuildModeGUI extends JFrame{
         fileMenu = new JMenu("Menu");
 
         /**
-         * Ñ¡ÏîÀ¸£ºÇå³ı¡¢¼ÓÔØ¡¢±£´æ¡¢ÍË³ö²¼¾Ö
+         * é€‰é¡¹æ ï¼šæ¸…é™¤ã€åŠ è½½ã€ä¿å­˜ã€é€€å‡ºå¸ƒå±€
          */
         menuBar = new JMenuBar();
         menuBar.add(fileMenu);
@@ -70,7 +70,7 @@ public class BuildModeGUI extends JFrame{
 
         System.out.println("Succeed in showing menu");
         /**
-         * °ó¶¨Ò»ÏµÁĞlistener¼àÌıÆ÷
+         * ç»‘å®šä¸€ç³»åˆ—listenerç›‘å¬å™¨
          */
         operationListener = new OperationListener(m);
         Clear.addActionListener(operationListener);
@@ -81,19 +81,19 @@ public class BuildModeGUI extends JFrame{
 
 
         /**
-         * ÉèÖÃ³ß´ç
+         * è®¾ç½®å°ºå¯¸
          */
 
 
         /**
-         * ÉèÖÃGizmoÔÚbuildÄ£Ê½ÏÂµÄbuttons
+         * è®¾ç½®Gizmoåœ¨buildæ¨¡å¼ä¸‹çš„buttons
          */
         JPanel buttons = new JPanel();
-        //¸ñ×´²¼¾Ö
+        //æ ¼çŠ¶å¸ƒå±€
         buttons.setLayout(new GridLayout(2,6));
 
         /**
-         * @param bt_run ÔËĞĞ°´Å¥
+         * @param bt_run è¿è¡ŒæŒ‰é’®
          */
         JButton bt_run = new JButton("Run");
         bt_run.addActionListener(entityListener);
@@ -102,7 +102,7 @@ public class BuildModeGUI extends JFrame{
 
 
         /**
-         * @param bt_delete É¾³ı°´Å¥
+         * @param bt_delete åˆ é™¤æŒ‰é’®
          */
         JButton bt_delete = new JButton("Delete");
         ImageIcon ic_delete = new ImageIcon("/icons/bt-delete.png");
@@ -115,7 +115,7 @@ public class BuildModeGUI extends JFrame{
 
 
         /**
-         * @param bt_rotate Ğı×ª°´Å¥
+         * @param bt_rotate æ—‹è½¬æŒ‰é’®
          */
         JButton bt_rotate = new JButton("Rotate");
         ImageIcon ic_rotate = new ImageIcon("/icons/bt-rotate.png");
@@ -126,7 +126,7 @@ public class BuildModeGUI extends JFrame{
         buttons.add(bt_rotate);
 
         /**
-         * @param bt_move ÒÆ¶¯°´Å¥
+         * @param bt_move ç§»åŠ¨æŒ‰é’®
          */
         JButton bt_move = new JButton("Rotate");
         ImageIcon ic_move = new ImageIcon("/icons/bt-move.png");
@@ -137,7 +137,7 @@ public class BuildModeGUI extends JFrame{
         buttons.add(bt_move);
 
         /**
-         * @param bt_square ·½ĞÎÕÏ°­Îï
+         * @param bt_square æ–¹å½¢éšœç¢ç‰©
          */
         JButton bt_square = new JButton("Square");
         ImageIcon ic_square = new ImageIcon("/icons/ic-square.png");
@@ -148,7 +148,7 @@ public class BuildModeGUI extends JFrame{
         buttons.add(bt_square);
 
         /**
-         * @param bt_triangle Èı½ÇĞÎÕÏ°­Îï
+         * @param bt_triangle ä¸‰è§’å½¢éšœç¢ç‰©
          */
         JButton bt_triangle = new JButton("Triangle");
         ImageIcon ic_triangle = new ImageIcon("/icons/ic-triangle.png");
@@ -159,7 +159,7 @@ public class BuildModeGUI extends JFrame{
         buttons.add(bt_triangle);
 
         /**
-         * @param bt_circle Ô²ĞÎÕÏ°­Îï
+         * @param bt_circle åœ†å½¢éšœç¢ç‰©
          */
         JButton bt_circle = new JButton("Circle");
         ImageIcon ic_circle = new ImageIcon("/icons/ic-circle.png");
@@ -170,7 +170,7 @@ public class BuildModeGUI extends JFrame{
         buttons.add(bt_circle);
 
         /**
-         * @param bt_absorber ÎüÊÕ°å
+         * @param bt_absorber å¸æ”¶æ¿
          */
         JButton bt_absorber = new JButton("Absorber");
         ImageIcon ic_absorber = new ImageIcon("/icons/ic-absorber.png");
@@ -182,7 +182,7 @@ public class BuildModeGUI extends JFrame{
 
 
         /**
-         * @param bt_lflipper ×ó²àµ²°å
+         * @param bt_lflipper å·¦ä¾§æŒ¡æ¿
          */
         JButton bt_lflipper = new JButton("LFlipper");
         ImageIcon ic_lflipper = new ImageIcon("/icons/ic-left-flipper.png");
@@ -193,7 +193,7 @@ public class BuildModeGUI extends JFrame{
         buttons.add(bt_lflipper);
 
         /**
-         * @param bt_rflipper ÓÒ²àµ²°å
+         * @param bt_rflipper å³ä¾§æŒ¡æ¿
          */
         JButton bt_rflipper = new JButton("RFlipper");
         ImageIcon ic_rflipper = new ImageIcon("/icons/ic-right-flipper.png");
@@ -204,7 +204,7 @@ public class BuildModeGUI extends JFrame{
         buttons.add(bt_rflipper);
 
         /**
-         * @param ball Ğ¡Çò
+         * @param ball å°çƒ
          */
         JButton ball = new JButton("Ball");
         ImageIcon ic_ball = new ImageIcon("/icons/ic-ball.png");
@@ -225,7 +225,6 @@ public class BuildModeGUI extends JFrame{
         setVisible(false);
     }
     
-
 }
 
 
@@ -260,7 +259,7 @@ public class BuildModeGUI extends JFrame{
 //	private ArrayList<StaticFlipper> staticFlippers;
 //	private ArrayList<TriangleBarrier> triangleBarriers;
 //	
-//	//³õÊ¼»¯½çÃæ
+//	//åˆå§‹åŒ–ç•Œé¢
 //	public BuildModeGUI() {
 //		
 //		board = new Board();
@@ -337,14 +336,14 @@ public class BuildModeGUI extends JFrame{
 //	}
 //	
 
-    //Í£Ö¹ÓÎÏ·
+    //åœæ­¢æ¸¸æˆ
 //	public void stopBalls(){
 //		for(Ball b : balls){
 //			b.setStopped();
 //		}
 //	}
 //	
-    //Ğ¡Çò¿ªÊ¼ÔË¶¯£¬ÓÎÏ·¿ªÊ¼
+    //å°çƒå¼€å§‹è¿åŠ¨ï¼Œæ¸¸æˆå¼€å§‹
 //	public void startBalls(){
 //			for(Ball b : balls){
 //				b.start();
