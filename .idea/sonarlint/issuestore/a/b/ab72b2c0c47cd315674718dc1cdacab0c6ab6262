@@ -1,0 +1,4 @@
+
+[squid:UselessImportCheck"+Remove this unused import 'java.awt.Color'.(ùÈãÈøÿÿÿÿ8àö“’ù,
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìºéÚ
+6squid:S1700"Rename field "grid"(ØûÈÇûÿÿÿÿ8àö“’ù,

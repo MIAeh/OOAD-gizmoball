@@ -3,39 +3,85 @@ package Entity;
 import java.awt.Color;
 
 import physics.Circle;
+import physics.Geometry;
 import physics.Vect;
 
 public class Ball {
+
 	private String ID;
+	private double x;
+	private double y;
 	private double vx;
 	private double vy;
 	private Vect velocity;
-	
 	private double radius;
-	private double x;
-	private double y;
 	private Color colour;
 	private boolean stopped;
 
 	public Ball(String ID, double x, double y, double xv, double yv) {
-		velocity = new Vect(xv, yv);
-		this.ID=ID;
-		this.x=x;
-		this.y=y;
-		this.radius=radius;
-		stopped=false;
+		this.x = x;
+		this.y = y;
 		colour = Color.YELLOW;
+		velocity = new Vect(xv, yv);
 		radius = 6.25;
-	}
-	
-	
-	
-	public String getID() {
-		return ID;
+		stopped = false;
+		this.ID = ID;
+		this.vx = xv;
+		this.vy = yv;
 	}
 
-	public void setID(String iD) {
-		ID = iD;
+	public Vect getVelo() {
+		return velocity;
+	}
+
+	public void setVelo(Vect v) {
+		velocity = v;
+		this.vx=v.getX();
+		this.vy=v.getY();
+	}
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public Circle getCircle() {
+		return new Circle(x, y, radius);
+	}
+
+	public double getExactX() {
+		return x;
+	}
+
+	public double getExactY() {
+		return y;
+	}
+
+	public void setExactX(double x) {
+		this.x = x;
+	}
+
+	public void setExactY(double y) {
+		this.y = y;
+	}
+
+	public void stop() {
+		stopped = true;
+	}
+
+	public void start() {
+		stopped = false;
+	}
+
+	public boolean stopped() {
+		return stopped;
+	}
+
+	public Color getColour() {
+		return colour;
+	}
+
+	public String getID() {
+		return ID;
 	}
 
 	public double getVx() {
@@ -54,118 +100,70 @@ public class Ball {
 		this.vy = vy;
 	}
 
-
-
-	public double getRadius() {
-		return radius;
-	}
-
-
-
-	public void setRadius(double radius) {
-		this.radius = radius;
-	}
-
-
-
 	public double getX() {
 		return x;
 	}
-
 
 	public void setX(double x) {
 		this.x = x;
 	}
 
-
-
 	public double getY() {
 		return y;
 	}
 
-
-
 	public void setY(double y) {
 		this.y = y;
 	}
-	
-	public Circle getCircle(){
-		return new Circle(x, y, radius);
-	}
-
 
 	public void setBallSpeed(int x, int y) {
-		this.vx=x;
-		this.vy=y;
-	}	
-
-	public Vect getVelo(){
-			return velocity;
+		this.vx = x;
+		this.vy = y;
 	}
 
-	public void setVelo(Vect v){
-		velocity = v;
-	}
-	
-	public void stop(){
-		stopped = true;
+	// ï¿½ï¿½ï¿½ï¿½
+	public void applyGravity(double time, double GRAVITY, double t) {
+		// this.vx=vx;
+		this.vy = this.vy + (GRAVITY * t);
+
 	}
 
+	// Ä¦ï¿½ï¿½
+	public void applyFriction(double time, double MU, double MU2) {
+		this.vx = vx * (1 - (MU * time) - ((MU2 / 25 * vx) * time));
+		this.vy = vy * (1 - (MU * time) - ((MU2 / 25 * vy) * time));
 
-	public boolean stopped(){
-		return stopped;
-	}
-
-	public Color getColour(){
-		return colour;
 	}
 
-	
-	//ï¿½ï¿½ï¿½ï¿½
-	public void applyGravity(double time,double GRAVITY,double t) {
-		this.vx=vx;
-		this.vy=this.vy + (GRAVITY*t);
-		
-	}
-	
-	//Ä¦ï¿½ï¿½
-	public void applyFriction(double time,double MU,double MU2) {
-		this.vx = vx*(1-(MU*time)-((MU2/25*vx)*time)); 
-		this.vy = vy*(1-(MU*time)-((MU2/25*vy)*time));
-		
+	// ÇòËæÊ±¼äÒÆ¶¯
+	public void moveForTime(double time) {
+
+		double newX = 0.0;
+		double newY = 0.0;
+		newX = this.x + (this.velocity.x() * time);
+		newY = this.y + (this.velocity.y() * time);
+		this.x = newX;
+		this.y = newY;
+
 	}
 
-	//Ð¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Æ¶ï¿½
-	public void movelBallForTime(double time) {
-		if(this.stopped) {
-			double newVx = this.vx;
-			double newVy = this.vy;
-			this.x = this.x + (newVx * time);
-			this.y = this.y + (newVy * time);
-		}
-		//return ball;
+	// ÇòÒÆ¶¯µ½Ö¸¶¨Î»ÖÃ
+	public void move(double x, double y) {
+		this.x = x;
+		this.y = y;
 	}
+
+	// //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½Ë¶ï¿½
+	 public void setStopped() {
+		 this.stopped=true;
+		 Vect v1=new Vect(0.0,0.0);
+		 this.setVelo(v1);
+	 }
+	 public double timeUntilCircleCollision(Ball b) {
+		 Circle ballCircle = b.getCircle();
+		 Vect ballVelocity = new Vect(b.getVx(),b.getVy());
+		 return Geometry.timeUntilCircleCollision(this.getCircle(), ballCircle, ballVelocity);
+	 }
 	
-	//ï¿½Æ¶ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Î»ï¿½ï¿½
-	public void move(double x,double y) {
-		this.x=x;
-		this.y=y;
-	}
-	
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½Ë¶ï¿½
-	public void setStopped() {
-		this.stopped=true;
-		this.vx=0;
-		this.vy=0;
-	}
-	
-	//ï¿½ï¿½Ê¼ï¿½Ë¶ï¿½
-	public void start(){
-		stopped = false;
-	}
-	
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²
-	public void reflectBall(Ball b) {
-		
-	}
+
 }

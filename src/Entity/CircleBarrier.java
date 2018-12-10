@@ -17,7 +17,7 @@ public class CircleBarrier{
 	private String ID;
 	
 	private Circle circle;
-
+	
 	public CircleBarrier(String id, double x, double y){
 		this.x = x;
 		this.y = y;
@@ -58,12 +58,13 @@ public class CircleBarrier{
 	public double timeUntilCircleCollision(Ball b) {
 		Circle ballCircle = b.getCircle();
 		Vect ballVelocity = new Vect(b.getVx(),b.getVy());
-		Circle circle = new Circle(new Vect(x, y), radius);
+		
 		return Geometry.timeUntilCircleCollision(circle, ballCircle, ballVelocity);
+		
 	}
 	
 	
-	//����С��
+//	//����С��
 	public Vect reflectBall(Ball b) {
 		Circle circle = new Circle(new Vect(x, y), radius);
 		Vect ballVelocity = new Vect(b.getVx(),b.getVy());

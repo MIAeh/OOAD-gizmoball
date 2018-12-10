@@ -1,3 +1,30 @@
 
-^squid:S2094"BRemove this empty class, write its code or make it an "interface".(ıÒÏ¾şÿÿÿÿ
+Bsquid:S1148Õ"#Use a logger to log this exception.(Ç’Çê8ü™õù,
+gsquid:S1192›"HDefine a constant instead of duplicating this literal "Rotate " 6 times.(å£ÆŠ8ü™õù,
+Nsquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ü™õù,
+isquid:S2095á"EUse try-with-resources or close this "Scanner" in a "finally" clause.(˜š‹úÿÿÿÿ8ü™õù,
+isquid:CommentedOutCodeLine|"<This block of commented-out lines of code should be removed.(¡¹£«8Æşõù,
+osquid:CommentedOutCodeLine½"<This block of commented-out lines of code should be removed.(úÏ£Åıÿÿÿÿ8ü™õù,
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+Gsquid:S1148Ç"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ü™õù,
+V
+squid:S106Ã"9Replace this use of System.out or System.err by a logger.(Çğõ"8ü™õù,
+W"squid:SwitchLastCaseIsDefaultCheck)""Add a default case to this switch.(êŠ­ï8øšû½ù,
+isquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(Ã·“8øšû½ù,
+isquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(Äš·¼8øšû½ù,
+isquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(Äš·¼8øšû½ù,
+V
+squid:S106+"9Replace this use of System.out or System.err by a logger.(éıŞ¾8øšû½ù,
+V
+squid:S106>"9Replace this use of System.out or System.err by a logger.( ç®8øšû½ù,
+V
+squid:S106A"9Replace this use of System.out or System.err by a logger.(ŒËïÍ8øšû½ù,
+V
+squid:S106S"9Replace this use of System.out or System.err by a logger.(¬€†˜8øšû½ù,
+V
+squid:S106f"9Replace this use of System.out or System.err by a logger.(¬€†˜8øšû½ù,
+Usquid:S1135W"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8øšû½ù,
+Usquid:S1135k"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8øšû½ù,
+usquid:S3776#"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¨šÇ†şÿÿÿÿ8øšû½ù,
+Fsquid:S1148X"#Use a logger to log this exception.(Âşÿâûÿÿÿÿ8øšû½ù,
+Fsquid:S1148l"#Use a logger to log this exception.(Âşÿâûÿÿÿÿ8øšû½ù,

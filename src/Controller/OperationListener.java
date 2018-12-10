@@ -40,7 +40,6 @@ public class OperationListener extends Observable implements ActionListener{
 		}  else { 
 		switch (e.getActionCommand()) {
 		case "Rotate":
-			System.out.println("rotate");
 			el.setRBT();
 			break;
 		case "Start":
@@ -125,6 +124,9 @@ public class OperationListener extends Observable implements ActionListener{
 		model.getSquareBarriers().clear();
 		model.getStaticFlippers().clear();
 		model.getTriangleBarriers().clear();
+		
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	
@@ -178,10 +180,16 @@ public class OperationListener extends Observable implements ActionListener{
 				bw.write("Circle" + " " + c.getID() + " " + ((int)(c.getX()-12.5)/25) + " " + ((int)(c.getY()-12.5)/25));
 				bw.newLine();
 			}
+			
 			for(Ball b: model.getBalls()){
-				bw.write("Ball" + " " + b.getID() + " " + ((int)b.getX()/25) + " " + ((int)b.getY()/25) + " " + 0 + " " +  0);
+				bw.write("Ball" + " " + b.getID() + " " + ((int)b.getExactX()/25) + " " + ((int)b.getExactY()/25) + " " + 0 + " " +  0);
 				bw.newLine();
 			}
+			
+//			for(Ball b: model.getBalls()){
+//				bw.write("Ball" + " " + b.getID() + " " + ((int)b.getX()/25) + " " + ((int)b.getY()/25) + " " + 0 + " " +  0);
+//				bw.newLine();
+//			}
 			for(StaticFlipper rf: model.getStaticFlippers()){
 				bw.write("RightFlipper" + " " + rf.getID() + " " + ((int)(rf.getXpos()-40)/25) + " " + ((int)rf.getYpos()/25));
 				bw.newLine();

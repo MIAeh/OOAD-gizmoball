@@ -1,0 +1,9 @@
+
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(μΊιΪ
+Xsquid:S1161$":Add the "@Override" annotation above this method signature(³ύκ8ÿ’ω,
+psquid:S3776$"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(³ύκ8‘‡±’ω,
+Zsquid:UselessImportCheck"/Remove this unused import 'java.awt.Dimension'.(‚Ί·8ÿ’ω,
+_squid:UselessImportCheck"4Remove this unused import 'java.lang.reflect.Array'.(‡΅Ι8Α“‡’ω,
+Isquid:S1905w"&Remove this unnecessary cast to "int".(β½τώÿÿÿÿ8ÿ’ω,
+Msquid:S1125")Remove the literal "false" boolean value.(¶°οωÿÿÿÿ8‘‡±’ω,
+Asquid:S1948"#Make "m" transient or serializable.(άχνη8νΌω,

@@ -1,0 +1,69 @@
+
+hsquid:CommentedOutCodeLine‹"<This block of commented-out lines of code should be removed.(¿àÛüÿÿÿÿ
+jsquid:S00116"RRename this field "SBumper" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿àÛ§
+psquid:S00116"SRename this field "Triangle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆå×»şÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ª¯Õ¹øÿÿÿÿ
+jsquid:S00116"RRename this field "CBumper" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û¨ƒ
+Nsquid:S1068-"+Remove this unused "gizmoID" private field.(ˆ¶¿ıÿÿÿÿ8–¸û½ù,
+€squid:S4144¨"\Update this method so that its implementation is not identical to "getAbsorbers" on line 80.(ÜÎÂÏûÿÿÿÿ8–¸û½ù,
+wsquid:S4144‚"XUpdate this method so that its implementation is not identical to "getBalls" on line 85.(‹£¦î8–¸û½ù,
+€squid:S4144¤"aUpdate this method so that its implementation is not identical to "getCircleBarriers" on line 90.(ÉŠÀ²8–¸û½ù,
+€squid:S4144¬"aUpdate this method so that its implementation is not identical to "getSquareBarriers" on line 97.(åñİç8–¸û½ù,
+†squid:S4144¸"bUpdate this method so that its implementation is not identical to "getStaticFlippers" on line 100.(¬ÁÎ­üÿÿÿÿ8–¸û½ù,
+ƒsquid:S4144°"dUpdate this method so that its implementation is not identical to "getTriangleBarriers" on line 103.(æŒå£8–¸û½ù,
+{squid:S4144‰"WUpdate this method so that its implementation is not identical to "getDBT" on line 250.(ˆ°Û‰ıÿÿÿÿ8–¸û½ù,
+{squid:S4144"WUpdate this method so that its implementation is not identical to "getRBT" on line 270.(¶ëûÿÿÿÿ8–¸û½ù,
+nsquid:CommentedOutCodeLine^"<This block of commented-out lines of code should be removed.(ÕËåšøÿÿÿÿ8–¸û½ù,
+nsquid:CommentedOutCodeLine`"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8–¸û½ù,
+osquid:CommentedOutCodeLine¼"<This block of commented-out lines of code should be removed.(Ñ­İ©şÿÿÿÿ8–¸û½ù,
+jsquid:CommentedOutCodeLine¾"<This block of commented-out lines of code should be removed.(ÍÔÖÚ8–¸û½ù,
+jsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(¦Û¬8–¸û½ù,
+osquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(¶Ã‚ßùÿÿÿÿ8–¸û½ù,
+osquid:CommentedOutCodeLine«"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8–¸û½ù,
+osquid:CommentedOutCodeLine®"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8–¸û½ù,
+osquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(ÌäŠıÿÿÿÿ8–¸û½ù,
+“squid:S1319P"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Šê‰ùÿÿÿÿ8–¸û½ù,
+“squid:S1319U"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÖˆÄ®ûÿÿÿÿ8–¸û½ù,
+squid:S1319Z"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ú¤Ÿc8–¸û½ù,
+squid:S1319a"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÒÈ½Ê8–¸û½ù,
+squid:S1319d"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(”òÏƒ8–¸û½ù,
+“squid:S1319g"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¥şÑºûÿÿÿÿ8–¸û½ù,
+squid:S1319‚"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹£¦î8–¸û½ù,
+squid:S1319¤"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÉŠÀ²8–¸û½ù,
+”squid:S1319¨"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÜÎÂÏûÿÿÿÿ8–¸û½ù,
+squid:S1319¬"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(åñİç8–¸û½ù,
+squid:S1319°"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(æŒå£8–¸û½ù,
+”squid:S1319´"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(²Éú†øÿÿÿÿ8–¸û½ù,
+”squid:S1319¸"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¬ÁÎ­üÿÿÿÿ8–¸û½ù,
+\
+squid:S106İ"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ8–¸û½ù,
+W
+squid:S106¢"9Replace this use of System.out or System.err by a logger.(Ëå´…8–¸û½ù,
+dsquid:HiddenFieldCheck÷"5Rename "b" which hides the field declared at line 42.(ííãÚúÿÿÿÿ8–¸û½ù,
+dsquid:HiddenFieldCheck–"5Rename "b" which hides the field declared at line 42.(ííãÚúÿÿÿÿ8–¸û½ù,
+dsquid:HiddenFieldCheckœ"5Rename "b" which hides the field declared at line 42.(ííãÚúÿÿÿÿ8–¸û½ù,
+fsquid:HiddenFieldCheck¯"<Rename "absorber" which hides the field declared at line 40.(Í¿¬ú8–¸û½ù,
+dsquid:HiddenFieldCheckÄ"5Rename "b" which hides the field declared at line 42.(ííãÚúÿÿÿÿ8–¸û½ù,
+dsquid:HiddenFieldCheckü"5Rename "b" which hides the field declared at line 42.(Ûû»Ñüÿÿÿÿ8–¸û½ù,
+gsquid:HiddenFieldCheck‹"8Rename "tItr" which hides the field declared at line 46.(ğß²ùÿÿÿÿ8–¸û½ù,
+gsquid:HiddenFieldCheckœ"8Rename "tItr" which hides the field declared at line 46.(ğß²ùÿÿÿÿ8–¸û½ù,
+hsquid:HiddenFieldCheck°"9Rename "sqItr" which hides the field declared at line 47.(¸¡¹ìÿÿÿÿÿ8–¸û½ù,
+hsquid:HiddenFieldCheckÂ"9Rename "rfItr" which hides the field declared at line 48.(‹¸¦£ùÿÿÿÿ8–¸û½ù,
+vsquid:S3776¢"RRefactor this method to reduce its Cognitive Complexity from 54 to the 15 allowed.(Öœ—Áúÿÿÿÿ8–¸û½ù,
+vsquid:S3776ã"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Å¨Ì°ÿÿÿÿÿ8–¸û½ù,
+?squid:S1170"!Make this final field static too.(¬Öì‰8–¸û½ù,
+Dsquid:S1170 "!Make this final field static too.(Ùûíøÿÿÿÿ8–¸û½ù,
+?squid:S1170!"!Make this final field static too.(½ŸĞ8–¸û½ù,
+\squid:S1854¬"8Remove this useless assignment to local variable "time".(Î¼Öüüÿÿÿÿ8–¸û½ù,
+qsquid:S00116"RRename this field "GRAVITY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Öì‰8–¸û½ù,
+qsquid:S00116 "MRename this field "MU" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùûíøÿÿÿÿ8–¸û½ù,
+msquid:S00116!"NRename this field "MU2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ŸĞ8–¸û½ù,
+{squid:S00116'"WRename this field "CircleBumper" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•´ğ—ıÿÿÿÿ8–¸û½ù,
+psquid:S00117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùæš8–¸û½ù,
+qsquid:S00117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª½á8–¸û½ù,
+psquid:S00117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í­Í	8–¸û½ù,
+qsquid:S00117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šû‚8–¸û½ù,
+vsquid:S00117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û¨ôùıÿÿÿÿ8–¸û½ù,
+qsquid:S00117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¬ğ©8–¸û½ù,
+vsquid:S00117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä•’Òÿÿÿÿÿ8–¸û½ù,
+bsquid:S1155ì">Use isEmpty() to check whether the collection is empty or not.(ìí’øÿÿÿÿ8–¸û½ù,

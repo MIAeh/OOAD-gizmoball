@@ -1,0 +1,35 @@
+
+^squid:S2184I"BCast one of the operands of this addition operation to a "double".(˜À­ˆúÿÿÿÿ
+Ysquid:S2184R"BCast one of the operands of this addition operation to a "double".( ÙšÌ
+Ysquid:S2184\"BCast one of the operands of this addition operation to a "double".( ÙšÌ
+[squid:S2184q"ECast one of the operands of this subtraction operation to a "double".(Á‰«
+[squid:S2184q"ECast one of the operands of this subtraction operation to a "double".(Á‰«
+Ksquid:S10664"/Merge this if statement with the enclosing one.(¹¬şÿúÿÿÿÿ
+Fsquid:S1066>"/Merge this if statement with the enclosing one.(¢‹¥¿
+Fsquid:S1066G"/Merge this if statement with the enclosing one.(¢‹¥¿
+Fsquid:S1066R"/Merge this if statement with the enclosing one.( ÙšÌ
+Fsquid:S1066\"/Merge this if statement with the enclosing one.( ÙšÌ
+Fsquid:S1066f"/Merge this if statement with the enclosing one.(¢‹¥¿
+gsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(†¨ìıÿÿÿÿ
+gsquid:CommentedOutCodeLiner"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+O
+squid:S106!"9Replace this use of System.out or System.err by a logger.(ö¡¹ê
+O
+squid:S106s"9Replace this use of System.out or System.err by a logger.(¨ëÃÜ
+>squid:S1125"(Remove the literal "true" boolean value.(ú±€/
+>squid:S11252"(Remove the literal "true" boolean value.(Æíãf
+Dsquid:S1125;"(Remove the literal "true" boolean value.(¡¢¿¢úÿÿÿÿ
+?squid:S1125E"(Remove the literal "true" boolean value.(Óá
+?squid:S1125P"(Remove the literal "true" boolean value.(‰×ô¦
+Dsquid:S1125Z"(Remove the literal "true" boolean value.(í—ˆ£ÿÿÿÿÿ
+Dsquid:S1125d"(Remove the literal "true" boolean value.(èÌ‘şÿÿÿÿ
+Dsquid:S1125n"(Remove the literal "true" boolean value.(’ÿ”Íûÿÿÿÿ
+>squid:S1125w"(Remove the literal "true" boolean value.(­¨
+Osquid:S1135„"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+Osquid:S1135Š"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+Osquid:S1135"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+Osquid:S1135–"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+Bsquid:S1481"&Remove this unused "l" local variable.(“æÛ¯ûÿÿÿÿ
+nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Ä Ïúüÿÿÿÿ
+Qsquid:S1854"5Remove this useless assignment to local variable "l".(“æÛ¯ûÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î

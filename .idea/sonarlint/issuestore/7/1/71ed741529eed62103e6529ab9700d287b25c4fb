@@ -1,3 +1,13 @@
 
-Ysquid:S2094"BRemove this empty class, write its code or make it an "interface".(‰¨¬ã
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8É ì’ù,
+Csquid:S1068"%Remove this unused "m" private field.(Ž¸öÕ8É ì’ù,
+isquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(‰»­µ8ùú„“ù,
+Asquid:S1948"#Make "m" transient or serializable.(Ž¸öÕ8ÚÑì’ù,
+usquid:S00117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Æ øÿÿÿÿ8Ýè‡“ù,
+nsquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(ÄØ´ùþÿÿÿÿ8©†“ù,
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ûÍäS8´•…“ù,
+usquid:S001177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(žÌ‡†ýÿÿÿÿ8Ðó†“ù,
+lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(â¯õ’8É ì’ù,
+isquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(âˆ£À8Ïß„“ù,
+isquid:CommentedOutCodeLine>"<This block of commented-out lines of code should be removed.(ìý©ˆ8’¿†“ù,
+isquid:UselessImportCheck"9Remove this unused import 'Controller.OperationListener'.(ù²•öøÿÿÿÿ8Ú•í’ù,

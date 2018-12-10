@@ -25,6 +25,10 @@ public class MsListener implements MouseListener {
 		int x=el.rounder((e.getX()-7));
 		int y=el.rounder((e.getY()-102));
 		
+		System.out.println("listener");
+
+		
+
 
 		if(el.getDBT()==true) {
 
@@ -41,10 +45,10 @@ public class MsListener implements MouseListener {
 				el.removeTBarrier(x, y);
 				el.removeSqOccupied(x, y);
 				el.removeAbsorber();
-			
 			}
 
 		}
+
 
 
 		if(el.getRBT()==true) {			
@@ -64,10 +68,13 @@ public class MsListener implements MouseListener {
 				
 			}
 
+
 		}
 
 		if(el.getSBT()==true) {
 			
+
+
 			if (!(el.checkTaken(x, y))) { 
 
 				el.addSquareBumper(x, y+25);
@@ -98,6 +105,7 @@ public class MsListener implements MouseListener {
 		}
 
 		if(el.getCBT()==true) {
+			System.out.println("hey2");
 
 			if (!(el.checkTaken(x, y))) { 
 				
@@ -109,11 +117,11 @@ public class MsListener implements MouseListener {
 
 		if(el.getBT()==true) {
 			
-		//	if(! (el.checkTaken(x, y))) {
-				el.addBall(e.getX()-7, e.getY()-102); 
-			//}
-			System.out.println("ballballball");
+			System.out.println("*******");
+			System.out.println(e.getX());
+			System.out.println(e.getY());			
 
+			el.addBall(e.getX()-7, e.getY()-102); 
 		}
 
 		if(el.getA()==true) {
