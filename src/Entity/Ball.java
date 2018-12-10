@@ -23,7 +23,7 @@ public class Ball {
 		this.x=x;
 		this.y=y;
 		this.radius=radius;
-		stopped=true;
+		stopped=false;
 		colour = Color.YELLOW;
 		radius = 6.25;
 	}

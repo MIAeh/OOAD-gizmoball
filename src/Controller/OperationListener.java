@@ -40,6 +40,7 @@ public class OperationListener extends Observable implements ActionListener{
 		}  else { 
 		switch (e.getActionCommand()) {
 		case "Rotate":
+			System.out.println("rotate");
 			el.setRBT();
 			break;
 		case "Start":

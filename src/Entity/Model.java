@@ -579,8 +579,6 @@ public class Model extends Observable {
 		
 		for (Ball b: ball) {
 		b.start();
-		//b.setExactX(490);
-		//	ball.setExactY(25);
 		Vect newVelo = new Vect(0, -800);
 		b.setVelo(newVelo);
 		}
