@@ -35,10 +35,6 @@ public class RunModeGUI extends JFrame {
 	private Model m;
 	private ActionListener actionListener;
 	private OperationListener operationListener;
-//	private ActionListener listener;
-//	private ShootBallListener listener1;
-//	private SwitchToBuildListener listener2;
-//	private QuitMenuListener quitMenuListener;
 
 	public RunModeGUI(Model m) {
 

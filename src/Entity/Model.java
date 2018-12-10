@@ -49,7 +49,6 @@ public class Model extends Observable {
 	
 	
 	public Model() {
-
 		walls = new Walls(0, 0, 500, 500);
 		absorb = new ArrayList<>();
 		rFlipper = new ArrayList<>();
