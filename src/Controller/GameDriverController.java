@@ -10,9 +10,7 @@ public class GameDriverController {
 
 		Model el = new Model();
 		new BuildModeGUI(el);
-		
-//		//锟斤拷锟斤拷锟绞�
-		//RunModeGUI runMode = new RunModeGUI(buildModeGUI);
+
 	}
 
 }

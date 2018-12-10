@@ -1,0 +1,12 @@
+
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èÄ…¬
+csquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(ƒåéÃ
+isquid:S00117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»éã·
+˜squid:S1186¨"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—ÒŒ!
+esquid:S00116	"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ÞÒï
+Bsquid:S1172}"+Remove this unused method parameter "time".(»éã·
+wsquid:S4165~"`Remove this useless assignment; "vx" already holds the assigned value along all execution paths.(ÿÑÿˆ
+jsquid:S00117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÖÁð
+jsquid:S00117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÖÁð
+{squid:S4165"dRemove this useless assignment; "radius" already holds the assigned value along all execution paths.(ØÝ•Ñ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ª¯Õ¹øÿÿÿÿ

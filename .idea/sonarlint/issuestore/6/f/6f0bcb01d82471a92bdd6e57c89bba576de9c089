@@ -1,3 +1,19 @@
 
-^squid:S2094"BRemove this empty class, write its code or make it an "interface".(†õ•§üÿÿÿÿ
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+nsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(¯£¡ÿþÿÿÿÿ8“„û½ù,
+V
+squid:S106&"9Replace this use of System.out or System.err by a logger.(œºïä8“„û½ù,
+V
+squid:S106*"9Replace this use of System.out or System.err by a logger.(÷‹Üê8“„û½ù,
+[
+squid:S106."9Replace this use of System.out or System.err by a logger.(ßƒ…ýÿÿÿÿ8“„û½ù,
+[
+squid:S1062"9Replace this use of System.out or System.err by a logger.(¦À¿Àøÿÿÿÿ8“„û½ù,
+[
+squid:S1066"9Replace this use of System.out or System.err by a logger.(¯î¹•ûÿÿÿÿ8“„û½ù,
+[
+squid:S106:"9Replace this use of System.out or System.err by a logger.(–çÀ°ýÿÿÿÿ8“„û½ù,
+V
+squid:S106>"9Replace this use of System.out or System.err by a logger.(‡½ñÒ8“„û½ù,
+[
+squid:S106C"9Replace this use of System.out or System.err by a logger.(ÏÃˆìýÿÿÿÿ8“„û½ù,

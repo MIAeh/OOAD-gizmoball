@@ -1,3 +1,22 @@
 
-^squid:S2094"BRemove this empty class, write its code or make it an "interface".(³Ì†ðÿÿÿÿÿ
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ãà–¯8í ¤“ù,
+isquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(‰»­µ8Ä¸¬“ù,
+fsquid:UselessImportCheck"6Remove this unused import 'java.awt.event.KeyAdapter'.(ä’£åþÿÿÿÿ8í ¤“ù,
+Asquid:S1948#"#Make "m" transient or serializable.(Ž¸öÕ8íï¤“ù,
+[squid:UselessImportCheck"+Remove this unused import 'java.awt.Color'.(ùÈãÈøÿÿÿÿ8í ¤“ù,
+_squid:UselessImportCheck"4Remove this unused import 'java.awt.event.KeyEvent'.(¬ðÝÍ8í ¤“ù,
+Zsquid:UselessImportCheck"/Remove this unused import 'javax.swing.JLabel'.(ý—àÓ8í ¤“ù,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8í ¤“ù,
+fsquid:UselessImportCheck"6Remove this unused import 'javax.swing.BorderFactory'.(ˆžØÇÿÿÿÿÿ8í ¤“ù,
+Csquid:S1068#"%Remove this unused "m" private field.(Ž¸öÕ8í ¤“ù,
+nsquid:S00116""ORename this field "Quit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ß±—8í ¤“ù,
+[squid:UselessImportCheck	"0Remove this unused import 'java.awt.GridLayout'.(ÀÚñæ8í ¤“ù,
+Osquid:S1068$"2Remove this unused "actionListener" private field.(‰†Ä{8¡»û½ù,
+hsquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(ûÍäS8¡»û½ù,
+isquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(âˆ£À8¡»û½ù,
+hsquid:CommentedOutCodeLine?"<This block of commented-out lines of code should be removed.(Íˆ‘8¡»û½ù,
+usquid:S00117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(žÌ‡†ýÿÿÿÿ8¡»û½ù,
+osquid:S00117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í×å8¡»û½ù,
+psquid:S00117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÇ±8¡»û½ù,
+Msquid:S1948$"0Make "actionListener" transient or serializable.(‰†Ä{8¡»û½ù,
+Vsquid:S1948%"3Make "operationListener" transient or serializable.(„Òà–ùÿÿÿÿ8¡»û½ù,

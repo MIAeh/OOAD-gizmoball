@@ -49,7 +49,6 @@ public class Model extends Observable {
 	
 	
 	public Model() {
-
 		walls = new Walls(0, 0, 500, 500);
 		absorb = new ArrayList<>();
 		rFlipper = new ArrayList<>();
@@ -313,45 +312,6 @@ public class Model extends Observable {
 		return rFlipper;
 	}
 
-//	public void flipRightFlipper(){
-//		for (StaticFlipper rf: rFlipper) {
-//
-//			rf.flip();
-//			this.setChanged();
-//			this.notifyObservers();
-//
-//		}
-//	}
-
-//	public void unflipRightFlipper(){
-//		for (StaticFlipper rf : rFlipper) {
-//
-//			rf.unFlip();
-//			this.setChanged();
-//			this.notifyObservers();
-//
-//		}
-//	}
-
-//	public void flipLeftFlipper(){
-//		for (StaticFlipper lf : lFlipper) {
-//
-//			lf.flip();
-//			this.setChanged();
-//			this.notifyObservers();
-//
-//		}
-//	}
-//
-//	public void unflipLeftFlipper(){
-//		for (StaticFlipper lf : lFlipper) {
-//
-//			lf.unFlip();
-//			this.setChanged();
-//			this.notifyObservers();
-//
-//		}
-//	}
 
 	public void moveBall() {
 
@@ -542,7 +502,6 @@ public class Model extends Observable {
 	}
 
 
-
 	public void setBallSpeed(int x, int y, Ball b) {
 		b.setVelo(new Vect(x, y));
 	}
@@ -649,25 +608,7 @@ public class Model extends Observable {
 		absorb.remove(0);
 		
 		removeSqOccupied(0, 0);
-		removeSqOccupied(0, 25);
-		removeSqOccupied(0, 50);
-		removeSqOccupied(0, 75);
-		removeSqOccupied(0, 100);
-		removeSqOccupied(0, 125);
-		removeSqOccupied(0, 150);
-		removeSqOccupied(0, 175);
-		removeSqOccupied(0, 200);
-		removeSqOccupied(0, 225);
-		removeSqOccupied(0, 250);
-		removeSqOccupied(0, 275);
-		removeSqOccupied(0, 300);
-		removeSqOccupied(0, 325);
-		removeSqOccupied(0, 350);
-		removeSqOccupied(0, 375);
-		removeSqOccupied(0, 400);
-		removeSqOccupied(0, 425);
-		removeSqOccupied(0, 450);
-		removeSqOccupied(0, 475);
+		
 		
 		
 		this.setChanged();
@@ -683,31 +624,7 @@ public class Model extends Observable {
 		absorb.add(new Absorber(ID, x, y, 25, 25));
 		
 		sqOccupied((int)x, (int)y);
-//		sqOccupied(0, 25);
-//		sqOccupied(0, 50);
-//		
-//		sqOccupied(0, 75);
-//		sqOccupied(0, 100);
-//		sqOccupied(0, 125);
-//		
-//		sqOccupied(0, 150);
-//		sqOccupied(0, 175);
-//		sqOccupied(0, 200);
-//		sqOccupied(0, 225);
-//		
-//		sqOccupied(0, 250);
-//		sqOccupied(0, 275);
-//		sqOccupied(0, 300);
-//		
-//		sqOccupied(0, 325);
-//		sqOccupied(0, 350);
-//		sqOccupied(0, 375);
-//		
-//		sqOccupied(0, 400);
-//		sqOccupied(0, 425);
-//		sqOccupied(0, 450);
-//		
-//		sqOccupied(0, 475);
+
 		
 		
 		this.setChanged();
@@ -715,42 +632,7 @@ public class Model extends Observable {
 
 	}
 	
-	
-	
-//	public void addAbsorber() { 
-//
-//		String ID = "A";
-//
-//		absorb.add(new Absorber(ID, 0, 475, 500, 500));
-//		
-//		sqOccupied(0, 0);
-//		sqOccupied(0, 25);
-//		sqOccupied(0, 50);
-//		sqOccupied(0, 75);
-//		sqOccupied(0, 100);
-//		sqOccupied(0, 125);
-//		sqOccupied(0, 150);
-//		sqOccupied(0, 175);
-//		sqOccupied(0, 200);
-//		sqOccupied(0, 225);
-//		sqOccupied(0, 250);
-//		sqOccupied(0, 275);
-//		sqOccupied(0, 300);
-//		sqOccupied(0, 325);
-//		sqOccupied(0, 350);
-//		sqOccupied(0, 375);
-//		sqOccupied(0, 400);
-//		sqOccupied(0, 425);
-//		sqOccupied(0, 450);
-//		sqOccupied(0, 475);
-//		
-//		
-//		this.setChanged();
-//		this.notifyObservers();
-//
-//	}
-//	
-	
+		
 	
 	public int rounder(int val) {
 		

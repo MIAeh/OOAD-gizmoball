@@ -27,8 +27,6 @@ public class MsListener implements MouseListener {
 		
 		System.out.println("listener");
 
-		
-
 
 		if(el.getDBT()==true) {
 
@@ -45,8 +43,6 @@ public class MsListener implements MouseListener {
 				el.removeTBarrier(x, y);
 				el.removeSqOccupied(x, y);
 				el.removeAbsorber();
-			
-
 			}
 
 		}

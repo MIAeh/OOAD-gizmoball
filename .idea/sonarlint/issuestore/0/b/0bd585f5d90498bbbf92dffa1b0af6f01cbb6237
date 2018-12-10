@@ -1,0 +1,7 @@
+
+asquid:HiddenFieldCheck=":Rename "circle" which hides the field declared at line 19.(™È¨Éúÿÿÿÿ
+@squid:S1068"*Remove this unused "height" private field.(µ¶®#
+Esquid:S1068")Remove this unused "width" private field.(äÇ´ùÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ª¯Õ¹øÿÿÿÿ
+esquid:S00116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ŞÒï
+asquid:HiddenFieldCheckD":Rename "circle" which hides the field declared at line 19.(™È¨Éúÿÿÿÿ
