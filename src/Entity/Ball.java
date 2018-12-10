@@ -21,7 +21,7 @@ public class Ball {
 	public Ball(String ID, double x, double y, double xv, double yv) {
 		this.x = x;
 		this.y = y;
-		colour = Color.YELLOW;
+		colour = Color.decode("#fff71e");
 		velocity = new Vect(xv, yv);
 		radius = 6.25;
 		stopped = false;
@@ -85,20 +85,14 @@ public class Ball {
 	}
 
 	public double getVx() {
-		return vx;
+		return velocity.getX();
 	}
 
-	public void setVx(double vx) {
-		this.vx = vx;
-	}
 
 	public double getVy() {
-		return vy;
+		return velocity.getY();
 	}
 
-	public void setVy(double vy) {
-		this.vy = vy;
-	}
 
 	public double getX() {
 		return x;
@@ -116,9 +110,10 @@ public class Ball {
 		this.y = y;
 	}
 
-	public void setBallSpeed(int x, int y) {
+	public void setBallSpeed(double x, double y) {
 		this.vx = x;
 		this.vy = y;
+		this.setVelo(new Vect(x,y));
 	}
 
 	// ����

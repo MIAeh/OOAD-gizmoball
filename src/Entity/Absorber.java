@@ -24,7 +24,7 @@ public class Absorber {
 		this.x = x;
 		this.y = y;
 		width = w;
-		colour = Color.GREEN;
+		colour = Color.decode("#9e0aa0");
 		ls = new LineSegment(x, y, x + w, y);
 		this.ID = ID;
 	}

@@ -30,7 +30,7 @@ public class SquareBarrier {
 		circles = new ArrayList<>();
 		lines = new ArrayList<>();
 		this.ID = ID;
-		colour = Color.decode("#FF938F");
+		colour = Color.decode("#6beae6");
 		circles.add(new Circle(new Vect(((x)), ((y))), radius));
 		circles.add(new Circle(new Vect(((x+w)), ((y))), radius));
 		circles.add(new Circle(new Vect(((x+w)), ((y-w))), radius));

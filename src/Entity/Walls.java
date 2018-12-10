@@ -7,6 +7,8 @@ import physics.Geometry;
 import physics.LineSegment;
 import physics.Vect;
 
+
+
 public class Walls {
 
 	
@@ -24,10 +26,10 @@ public class Walls {
 	
 	public ArrayList<LineSegment> getLineSegments() {
 		ArrayList<LineSegment> ls = new ArrayList<LineSegment>();
-		LineSegment l1 = new LineSegment(leftTopX,leftTopY,rightBottomX,rightBottomY);
-		LineSegment l2 = new LineSegment(leftTopX,leftTopY,rightBottomX,rightBottomY);
-		LineSegment l3 = new LineSegment(leftTopX,leftTopY,rightBottomX,rightBottomY);
-		LineSegment l4 = new LineSegment(leftTopX,leftTopY,rightBottomX,rightBottomY);
+		LineSegment l1 = new LineSegment(leftTopX,leftTopY,rightBottomX,leftTopY);
+		LineSegment l2 = new LineSegment(leftTopX,leftTopY,leftTopX,rightBottomY);
+		LineSegment l3 = new LineSegment(rightBottomX,leftTopY,rightBottomX,rightBottomY);
+		LineSegment l4 = new LineSegment(leftTopX,rightBottomY,rightBottomX,rightBottomY);
 		ls.add(l1);
 		ls.add(l2);
 		ls.add(l3);

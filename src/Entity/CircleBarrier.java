@@ -21,7 +21,7 @@ public class CircleBarrier{
 	public CircleBarrier(String id, double x, double y){
 		this.x = x;
 		this.y = y;
-		colour = Color.decode("#5CB8CC");
+		colour = Color.decode("#1579ab");
 		radius = 12.5;
 		circle = new Circle(new Vect(x, y), radius);
 		this.ID = id;

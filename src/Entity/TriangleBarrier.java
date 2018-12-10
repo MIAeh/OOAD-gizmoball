@@ -31,7 +31,7 @@ public class TriangleBarrier {
 		degree = 0;
 		circles = new ArrayList<>();
 		lines = new ArrayList<>();
-		colour = Color.gray;
+		colour = Color.decode("#c82818");
 		circles.add(new Circle(new Vect((x-w), (y+w)), radius));
 		circles.add(new Circle(new Vect((x+w), (y-w)), radius));
 		circles.add(new Circle(new Vect((x-w), (y-w)), radius));

@@ -58,11 +58,11 @@ public class GUI extends JFrame {
         bt_start.setFocusable(false);
         buttons.add(bt_start);
 
-        JButton bt_shoot = new JButton("Shoot ball");
-//        bt_shoot.addActionListener(listener);
-        bt_shoot.setFont(gf);
-        bt_shoot.setFocusable(false);
-        buttons.add(bt_shoot);
+//        JButton bt_shoot = new JButton("Shoot ball");
+////        bt_shoot.addActionListener(listener);
+//        bt_shoot.setFont(gf);
+//        bt_shoot.setFocusable(false);
+//        buttons.add(bt_shoot);
 
         cPane.add(buttons, BorderLayout.NORTH);
         cPane.add(board, BorderLayout.CENTER);

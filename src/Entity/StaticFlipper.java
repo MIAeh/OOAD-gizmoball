@@ -23,7 +23,7 @@ public class StaticFlipper {
 	public StaticFlipper(String ID, double x, double y) {
 		this.x = x;
 		this.y = y;
-		colour = Color.decode("#EC4590");
+		colour = Color.decode("#ffc71e");
 		width = 50;
 		degree = -90;
 		this.ID = ID;

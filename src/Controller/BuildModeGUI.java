@@ -63,7 +63,7 @@ public class BuildModeGUI extends JFrame{
         lpane.add(grid, new Integer(0), 0);
 
 
-        setSize(517, 612);
+        setSize(517, 597);
         //setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);

@@ -128,7 +128,8 @@ public class MsListener implements MouseListener {
 
 		if(el.getA()==true) {
 			
-			el.addAbsorber(); 
+			el.addAbsorber(x, y+25);
+			//el.addAbsorber(); 
 			
 		}
 
