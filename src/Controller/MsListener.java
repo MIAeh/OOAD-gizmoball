@@ -27,8 +27,6 @@ public class MsListener implements MouseListener {
 		
 		System.out.println("listener");
 
-		
-
 
 		if(el.getDBT()==true) {
 

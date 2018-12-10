@@ -90,16 +90,5 @@ public class SquareBarrier {
 	public String getID() {
 		return ID;
 	}
-	
-	//��ײʱ��
-//	public double timeUntilCircleCollision(Ball b) {
-//		
-//	}
-//	
-//	
-//	//����С��
-//	public Vect reflectBall(Ball b) {
-//		
-//		
-//	}
+
 }

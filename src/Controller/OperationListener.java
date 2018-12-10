@@ -185,19 +185,11 @@ public class OperationListener extends Observable implements ActionListener{
 				bw.write("Ball" + " " + b.getID() + " " + ((int)b.getExactX()/25) + " " + ((int)b.getExactY()/25) + " " + 0 + " " +  0);
 				bw.newLine();
 			}
-			
-//			for(Ball b: model.getBalls()){
-//				bw.write("Ball" + " " + b.getID() + " " + ((int)b.getX()/25) + " " + ((int)b.getY()/25) + " " + 0 + " " +  0);
-//				bw.newLine();
-//			}
+
 			for(StaticFlipper rf: model.getStaticFlippers()){
 				bw.write("RightFlipper" + " " + rf.getID() + " " + ((int)(rf.getXpos()-40)/25) + " " + ((int)rf.getYpos()/25));
 				bw.newLine();
 			}
-//			for(LeftFlipper lf: lFlipper){
-//				bw.write("LeftFlipper" + " " + lf.getID() + " " + ((int)lf.getXpos()/25) + " " + ((int)lf.getYpos()/25));
-//				bw.newLine();
-//			}
 			
 
 			System.out.println("Done");

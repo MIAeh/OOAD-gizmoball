@@ -54,10 +54,6 @@ public class RunModeGUI extends JFrame {
 		Quit = new JMenuItem("Quit");
 		fileMenu.add(Quit);
 		operationListener = new OperationListener(m);
-//		listener = new RunListener(m);
-//		listener1 = new ShootBallListener(m);
-//		listener2 = new SwitchToBuildListener(m, this);
-//		quitMenuListener = new QuitMenuListener(m);
 
 		setSize(517, 597);
 		//setResizable(false);
@@ -95,8 +91,6 @@ public class RunModeGUI extends JFrame {
 		cPane.add(buttons, BorderLayout.NORTH);
 		cPane.add(board, BorderLayout.CENTER);
 
-//
-//		this.addKeyListener(listener1);
 
 		setVisible(true);
 	}
