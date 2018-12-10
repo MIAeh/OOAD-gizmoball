@@ -30,7 +30,6 @@ public class EntityListener extends Observable implements ActionListener {
 		el.setRBF();
 		el.setDBF();
 		el.setTBF();
-		//el.setBT();
 		
 		switch (e.getActionCommand()) {
 		
@@ -61,6 +60,11 @@ public class EntityListener extends Observable implements ActionListener {
 		case "Absorber":
 			System.out.println("Absorber Button Selected");
 			el.setAT();
+			break;
+		
+		case "Rotate":
+			System.out.println("Rotate Button Selected");
+			el.setRBT();
 			break;
 			
 		default:

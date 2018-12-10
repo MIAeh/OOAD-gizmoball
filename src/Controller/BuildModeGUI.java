@@ -118,7 +118,7 @@ public class BuildModeGUI extends JFrame{
        // ImageIcon ic_rotate = new ImageIcon("/icons/bt-rotate.png");
         //bt_rotate.setIcon(ic_rotate);
         bt_rotate.setPreferredSize(new Dimension(20, 20));
-        bt_rotate.addActionListener(operationListener);
+        bt_rotate.addActionListener(entityListener);
         bt_rotate.setFocusable(false);
         buttons.add(bt_rotate);
 

@@ -68,7 +68,7 @@ public class Model extends Observable {
 		rotateBumper = false;
 		b = false;
 		absorber = false;
-		occupiedSq = new boolean[200][200];
+		occupiedSq = new boolean[20][20];
 		gizmoID=null;
 		tItr = Triangle.iterator();
 		sqItr = SBumper.iterator();
@@ -366,8 +366,6 @@ public class Model extends Observable {
 		}
 	}
 
-
-
 	public void moveBall() {
 
 		double moveTime = 0.03; // 0.05 = 20 times per second as per Gizmoball
@@ -379,18 +377,18 @@ public class Model extends Observable {
 			double tuc = cd.getTuc();
 			if (tuc > moveTime) {
 				// No collision ...
-				b.movelBallForTime(moveTime);
+				b.moveForTime(moveTime);
 				applyGravity(moveTime, b);
 					applyFriction(moveTime,b);
 			} else {
 				// We've got a collision in tuc
-				b.movelBallForTime(tuc);
+				b.moveForTime(tuc);
 				// Post collision velocity ...
 
 				b.setVelo(cd.getVelo());
 				// ball.setExactX(550);
 				applyGravity(tuc, b);
-						applyFriction(tuc, b);
+				applyFriction(tuc, b);
 
 			}
 		}
@@ -401,6 +399,8 @@ public class Model extends Observable {
 		}
 		
 	}
+
+
 	
 	public void stopBalls(){
 		for(Ball b : ball){
@@ -414,7 +414,6 @@ public class Model extends Observable {
 			}
 		}
 	
-
 	private CollisionDetails timeUntilCollision(Ball b) {
 		// Find Time Until Collision and also, if there is a collision, the new
 		// speed vector.
@@ -428,12 +427,13 @@ public class Model extends Observable {
 		double time = 0.0;
 
 
+		//Absorber
 		for (Absorber absorber : absorb) {
-			time =  absorber.timeUntilAbsorb(b);
+			time = absorber.timeUntilAbsorb(b);
 			if (time < shortestTime) {
 				shortestTime = time;
 				newVelo =  new Vect(0, 0);
-				
+				//ball.setExactX(550);
 				b.stopped();
 		
 			}
@@ -459,7 +459,8 @@ public class Model extends Observable {
 		}
 		
 		for (Ball balls : ball) {
-			time = Geometry.timeUntilCircleCollision(balls.getCircle(), ballCircle, ballVelocity);
+			time=balls.timeUntilCircleCollision(b);
+			//time = Geometry.timeUntilCircleCollision(balls.getCircle(), ballCircle, ballVelocity);
 			if (time < shortestTime) {
 				shortestTime = time;
 				newVelo = Geometry.reflectCircle(balls.getCircle().getCenter(), b.getCircle().getCenter(),
@@ -478,18 +479,18 @@ public class Model extends Observable {
 				}
 				
 			}
-		}
+			}
 
-		for (SquareBarrier Sbump1 : SBumper) {
-			for (int i = 0; i < Sbump1.getLines().size(); i++) {
-				time = Geometry.timeUntilWallCollision(Sbump1.getLines().get(i), ballCircle, ballVelocity);
-				if (time < shortestTime) {
-					shortestTime = time;
-					newVelo = Geometry.reflectWall(Sbump1.getLines().get(i), b.getVelo(), 1.0);
+			for (SquareBarrier Sbump1 : SBumper) {
+				for (int i = 0; i < Sbump1.getLines().size(); i++) {
+					time = Geometry.timeUntilWallCollision(Sbump1.getLines().get(i), ballCircle, ballVelocity);
+					if (time < shortestTime) {
+						shortestTime = time;
+						newVelo = Geometry.reflectWall(Sbump1.getLines().get(i), b.getVelo(), 1.0);
 
+					}
 				}
 			}
-		}
 
 			for (TriangleBarrier Tbump : Triangle) {
 				for (int i = 0; i < Tbump.getCircles().size(); i++) {
@@ -535,16 +536,16 @@ public class Model extends Observable {
 					}
 				}
 			} 
-			for (StaticFlipper lFlip : lFlipper) {
-				for (int i = 0; i < lFlip.getCircles().size(); i++) {
-					time = Geometry.timeUntilCircleCollision(lFlip.getCircles().get(i), ballCircle, ballVelocity);
-					if (time < shortestTime) {
-						shortestTime = time;
-						newVelo = Geometry.reflectCircle(lFlip.getCircles().get(i).getCenter(),
-								b.getCircle().getCenter(), b.getVelo(), 1.0);
-					}
-				}
-			} 
+//			for (LeftFlipper lFlip : lFlipper) {
+//				for (int i = 0; i < lFlip.getCircles().size(); i++) {
+//					time = Geometry.timeUntilCircleCollision(lFlip.getCircles().get(i), ballCircle, ballVelocity);
+//					if (time < shortestTime) {
+//						shortestTime = time;
+//						newVelo = Geometry.reflectCircle(lFlip.getCircles().get(i).getCenter(),
+//								b.getCircle().getCenter(), b.getVelo(), 1.0);
+//					}
+//				}
+//			} 
 //			for (LeftFlipper lFlip : lFlipper) {
 //				for (int i = 0; i < lFlip.getLines().size(); i++) {
 //					time = Geometry.timeUntilWallCollision(lFlip.getLines().get(i), ballCircle, ballVelocity);
@@ -558,6 +559,150 @@ public class Model extends Observable {
 //		}
 		return new CollisionDetails(shortestTime, newVelo);
 	}
+
+//	private CollisionDetails timeUntilCollision(Ball b) {
+//		// Find Time Until Collision and also, if there is a collision, the new
+//		// speed vector.
+//		// Create a physics.Circle from Ball
+//		Circle ballCircle = b.getCircle();
+//		Vect ballVelocity = b.getVelo();
+//		Vect newVelo = new Vect(0, 0);
+//
+//		// Now find shortest time to hit a vertical line or a wall line
+//		double shortestTime = Double.MAX_VALUE;
+//		double time = 0.0;
+//
+//
+//		for (Absorber absorber : absorb) {
+//			time =  absorber.timeUntilAbsorb(b);
+//			if (time < shortestTime) {
+//				shortestTime = time;
+//				newVelo =  new Vect(0, 0);
+//				
+//				b.stopped();
+//		
+//			}
+//		}
+//
+//		// Time to collide with 4 walls
+//		ArrayList<LineSegment> lss = walls.getLineSegments();
+//		for (LineSegment line : lss) {
+//			time = Geometry.timeUntilWallCollision(line, ballCircle, ballVelocity);
+//			if (time < shortestTime) {
+//				shortestTime = time;
+//				newVelo = Geometry.reflectWall(line, b.getVelo(), 1.0);
+//			}
+//		}
+//
+//		for (CircleBarrier bump : CBumper) {
+//			time = bump.timeUntilCircleCollision(b);
+//			if (time < shortestTime) {
+//				shortestTime = time;
+//				newVelo = Geometry.reflectCircle(bump.getCircle().getCenter(), b.getCircle().getCenter(),
+//						b.getVelo(), 1.0);
+//			}
+//		}
+//		
+//		for (Ball balls : ball) {
+//			time = Geometry.timeUntilCircleCollision(balls.getCircle(), ballCircle, ballVelocity);
+//			if (time < shortestTime) {
+//				shortestTime = time;
+//				newVelo = Geometry.reflectCircle(balls.getCircle().getCenter(), b.getCircle().getCenter(),
+//						b.getVelo(), 1.0);
+//			}
+//		}
+//
+//
+//		for (SquareBarrier Sbump : SBumper) {
+//			for (int i = 0; i < Sbump.getCircles().size(); i++) {
+//				time = Geometry.timeUntilCircleCollision(Sbump.getCircles().get(i), ballCircle, ballVelocity);
+//				if (time < shortestTime) {
+//					shortestTime = time;
+//					newVelo = Geometry.reflectCircle(Sbump.getCircles().get(i).getCenter(),
+//							b.getCircle().getCenter(), b.getVelo(), 1.0);
+//				}
+//				
+//			}
+//		}
+//
+//		for (SquareBarrier Sbump1 : SBumper) {
+//			for (int i = 0; i < Sbump1.getLines().size(); i++) {
+//				time = Geometry.timeUntilWallCollision(Sbump1.getLines().get(i), ballCircle, ballVelocity);
+//				if (time < shortestTime) {
+//					shortestTime = time;
+//					newVelo = Geometry.reflectWall(Sbump1.getLines().get(i), b.getVelo(), 1.0);
+//
+//				}
+//			}
+//		}
+//
+//			for (TriangleBarrier Tbump : Triangle) {
+//				for (int i = 0; i < Tbump.getCircles().size(); i++) {
+//					time = Geometry.timeUntilCircleCollision(Tbump.getCircles().get(i), ballCircle, ballVelocity);
+//					if (time < shortestTime) {
+//						shortestTime = time;
+//						newVelo = Geometry.reflectCircle(Tbump.getCircles().get(i).getCenter(),
+//								b.getCircle().getCenter(), b.getVelo(), 1.0);
+//					}
+//				}
+//			} 
+//
+//			for (TriangleBarrier Tbump1 : Triangle) {
+//				for (int i = 0; i < Tbump1.getLines().size(); i++) {
+//					time = Geometry.timeUntilWallCollision(Tbump1.getLines().get(i), ballCircle, ballVelocity);
+//					if (time < shortestTime) {
+//						shortestTime = time;
+//						newVelo = Geometry.reflectWall(Tbump1.getLines().get(i), b.getVelo(), 1.0);
+//
+//					}
+//				}
+//
+//			}
+//			for (StaticFlipper rFlip : rFlipper) {
+//				for (int i = 0; i < rFlip.getLines().size(); i++) {
+//					time = Geometry.timeUntilWallCollision(rFlip.getLines().get(i), ballCircle, ballVelocity);
+//					if (time < shortestTime) {
+//						shortestTime = time;
+//						newVelo = Geometry.reflectWall(rFlip.getLines().get(i), b.getVelo(), 1.0);
+//
+//					}
+//				}
+//
+//			}
+//			
+//			for (StaticFlipper rFlip : rFlipper) {
+//				for (int i = 0; i < rFlip.getCircles().size(); i++) {
+//					time = Geometry.timeUntilCircleCollision(rFlip.getCircles().get(i), ballCircle, ballVelocity);
+//					if (time < shortestTime) {
+//						shortestTime = time;
+//						newVelo = Geometry.reflectCircle(rFlip.getCircles().get(i).getCenter(),
+//								b.getCircle().getCenter(), b.getVelo(), 1.0);
+//					}
+//				}
+//			} 
+//			for (StaticFlipper lFlip : lFlipper) {
+//				for (int i = 0; i < lFlip.getCircles().size(); i++) {
+//					time = Geometry.timeUntilCircleCollision(lFlip.getCircles().get(i), ballCircle, ballVelocity);
+//					if (time < shortestTime) {
+//						shortestTime = time;
+//						newVelo = Geometry.reflectCircle(lFlip.getCircles().get(i).getCenter(),
+//								b.getCircle().getCenter(), b.getVelo(), 1.0);
+//					}
+//				}
+//			} 
+////			for (LeftFlipper lFlip : lFlipper) {
+////				for (int i = 0; i < lFlip.getLines().size(); i++) {
+////					time = Geometry.timeUntilWallCollision(lFlip.getLines().get(i), ballCircle, ballVelocity);
+////					if (time < shortestTime) {
+////						shortestTime = time;
+////						newVelo = Geometry.reflectWall(lFlip.getLines().get(i), b.getVelo(), 1.0);
+////
+////					}
+////				}			
+////
+////		}
+//		return new CollisionDetails(shortestTime, newVelo);
+//	}
 
 	public void setBallSpeed(int x, int y, Ball b) {
 		b.setVelo(new Vect(x, y));
@@ -579,6 +724,8 @@ public class Model extends Observable {
 		
 		for (Ball b: ball) {
 		b.start();
+		//b.setExactX(490);
+		//	ball.setExactY(25);
 		Vect newVelo = new Vect(0, -800);
 		b.setVelo(newVelo);
 		}

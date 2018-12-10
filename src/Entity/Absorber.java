@@ -50,6 +50,10 @@ public class Absorber {
 		return width;
 	}
 	
+	public LineSegment getLineSeg() {
+		return ls;
+	}
+	
 	//计算碰撞时间
 	public double timeUntilAbsorb(Ball b)
 	{
@@ -59,6 +63,7 @@ public class Absorber {
 			
 		return time;
 	}
+	
 
 	//吸收球
 	public void absorbBall(Ball ball) {
